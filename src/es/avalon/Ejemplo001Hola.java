@@ -1,6 +1,6 @@
 package es.avalon;
 
-public class HolaMundo {
+public class Ejemplo001Hola {
 
     public static void main (String[] args){
 

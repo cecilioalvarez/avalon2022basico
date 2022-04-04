@@ -19,5 +19,12 @@ public class Ejemplo002Tipos {
         System.out.println(numero4);
         System.out.println(numero5);
         System.out.println(numero6);
+        char letra='a';
+        boolean verdadero=true;
+        boolean falso=false;
+
+        System.out.println(letra);
+        System.out.println(verdadero);
+        System.out.println(falso);
     }
 }
