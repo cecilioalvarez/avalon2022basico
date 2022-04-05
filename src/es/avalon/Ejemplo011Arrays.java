@@ -12,7 +12,6 @@ public class Ejemplo011Arrays {
 
         for(int i=0;i<lista.length;i++){
 
-
             System.out.println(lista[i]);
         }
     }
