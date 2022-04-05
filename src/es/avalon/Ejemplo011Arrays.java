@@ -9,5 +9,10 @@ public class Ejemplo011Arrays {
         System.out.println(lista[0]);
         System.out.println(lista[1]);
         System.out.println(lista[2]);
+
+        for(int i=0;i<lista.length;i++){
+
+            System.out.println(lista[i]);
+        }
     }
 }
