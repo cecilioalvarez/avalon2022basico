@@ -7,12 +7,12 @@ public class Ejemplo013ArraysAprobados {
             if (lista[i]<5){
                 System.out.print(lista[i]);
                 System.out.println("->Esta suspendido");
-                i++;
             }
             else{
                 System.out.print(lista[i]);
                 System.out.println("->Esta Aprobado");
             }
+            i++;
         }
     }
 }
