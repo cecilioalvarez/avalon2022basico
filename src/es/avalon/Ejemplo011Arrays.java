@@ -12,6 +12,7 @@ public class Ejemplo011Arrays {
 
         for(int i=0;i<lista.length;i++){
 
+            //te acabo de corregir esto
             System.out.println(lista[i]);
         }
     }
