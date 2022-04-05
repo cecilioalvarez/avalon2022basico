@@ -15,8 +15,8 @@ public class EjemploArraysAprobados {
             }else suspenso++;
 
            }
-            System.out.println(aprobado);
-            System.out.println(suspenso);
+            System.out.println("Aprobados:" + " " + aprobado);
+            System.out.println("Suspensos:" + " " + suspenso);
 
 
     }
