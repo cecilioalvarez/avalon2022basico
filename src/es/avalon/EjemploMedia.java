@@ -16,7 +16,7 @@ public class EjemploMedia {
         }
 
         System.out.println(suma/lista.length);
-        System.out.println(sumaCuadrados);
+        System.out.println(sumaCuadrados/ lista.length);
 
 
 
