@@ -7,6 +7,6 @@ public class Ejemplo013ArraysAprobados {
                 aprobados++;
             }
         }
-        System.out.println("total parobados: "+aprobados);
+        System.out.println("total aprobados: "+aprobados);
     }
 }
