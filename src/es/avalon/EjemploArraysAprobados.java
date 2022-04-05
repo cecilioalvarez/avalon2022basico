@@ -4,7 +4,7 @@ public class EjemploArraysAprobados {
 
     public static void main(String[] args) {
 
-        int [] lista= new int[]{1,3,6,2,5,8,10,6,4,2,6,8,5,3};
+        int [] lista= new int[]{1,3,6,2,5,8,10,6,4,2,6,8,5,3,7,4,2,6,8,6,4,7,9};
 
                 int aprobado=0;
                 int suspenso=0;
