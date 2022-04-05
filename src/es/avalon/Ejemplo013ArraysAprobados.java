@@ -12,7 +12,7 @@ public class Ejemplo013ArraysAprobados {
                 System.out.print(lista[i]);
                 System.out.println("->Esta Aprobado");
             }
-            i++;
+
         }
     }
 }
