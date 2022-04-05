@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class Ejemplo004If {
     public static void main(String[] args) {
         int nota=5;

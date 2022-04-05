@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class BucleFor {
     public static void main(String[] args) {
 

@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class Ejemplo006Bucle {
 
     public static void main(String[] args) {

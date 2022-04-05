@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class Ejemplo003Matematicas {
     public static void main(String[] args) {
 

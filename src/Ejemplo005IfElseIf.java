@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class Ejemplo005IfElseIf {
     public static void main(String[] args) {
 

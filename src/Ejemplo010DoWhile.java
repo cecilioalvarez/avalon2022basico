@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class Ejemplo010DoWhile {
 
     public static void main(String[] args) {

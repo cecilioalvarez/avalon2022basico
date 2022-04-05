@@ -1,5 +1,3 @@
-package es.avalon;
-
 public class Ejemplo002Tipos {
     public static void main (String args[]) {
 
