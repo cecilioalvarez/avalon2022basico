@@ -1,0 +1,16 @@
+package es.avalon;
+
+public class Ejemplo018SumaFuncion {
+    public static void main(String[] args) {
+        System.out.println(sumaNNumeros(5));
+
+    }
+    static double sumaNNumeros(int tope){
+        int total=0;
+        for (int i=0;i<tope; i++){
+            total=total+i;
+            System.out.println(total);
+        }
+        return total;
+    }
+}
