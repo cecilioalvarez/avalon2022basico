@@ -11,6 +11,6 @@ public class Ejemplo013ArraysAprobados {
                 System.out.println("estudiante no aprobado con nota de: "+lista[i]);
             }
         }
-        System.out.println("total parobados: "+aprobados);
+        System.out.println("total aprobados: "+aprobados);
     }
 }
