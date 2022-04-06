@@ -1,6 +1,6 @@
 package es.avalon;
 
-public class EjemploMedia {
+public class Ejemplo014Media {
     public static void main(String[] args) {
         int[] lista = new int[]{7,10,5,1,3,2};
         double suma=0;
