@@ -1,6 +1,6 @@
 package es.avalon;
 
-public class EjemploSumaElementosArray {
+public class Ejemplo022SumaElementosArray {
     public static void main(String[] args) {
 
 
