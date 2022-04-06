@@ -9,16 +9,24 @@ public class EjemploSumaElementosArray {
         int [] sumaElementos= new int[7];
         //el elemento ya esta reservado
 
-        for (int i=0;i<numeros.length;i++) {
+        sumar(numeros, numeros2, sumaElementos);
 
-            sumaElementos[i]=numeros[i]+numeros2[i];
-        }
+        recorrer(numeros, sumaElementos);
 
-        for (int i=0;i<numeros.length;i++) {
+
+    }
+
+    private static void recorrer(int[] numeros, int[] sumaElementos) {
+        for (int i = 0; i< numeros.length; i++) {
 
             System.out.println(sumaElementos[i]);
         }
+    }
 
+    private static void sumar(int[] numeros, int[] numeros2, int[] sumaElementos) {
+        for (int i = 0; i< numeros.length; i++) {
 
+            sumaElementos[i]= numeros[i]+ numeros2[i];
+        }
     }
 }
