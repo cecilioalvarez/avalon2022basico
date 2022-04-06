@@ -5,10 +5,10 @@ public class Ejemplo017Funciones {
     public static void main(String[] args) {
 
 
-        //Uso de la funcion
-        double suma = sumar(2,3);
-
-        System.out.println(suma);
+        System.out.println(sumar(2,3));
+        System.out.println(restar(2,3));
+        System.out.println(multiplicar(2,3));
+        System.out.println(dividir(2,3));
 
     }
 
@@ -18,5 +18,19 @@ public class Ejemplo017Funciones {
     static double sumar(double a, double b){
         return a+b;
     }
+
+    static double restar(double a, double b){
+        return a-b;
+    }
+
+    static double multiplicar(double a, double b){
+        return a*b;
+    }
+
+    static double dividir(double a, double b){
+        return a/b;
+    }
+
+
 
 }
