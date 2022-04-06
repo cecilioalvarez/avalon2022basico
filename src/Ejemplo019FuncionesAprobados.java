@@ -1,4 +1,4 @@
-public class Ejemplo019 {
+public class Ejemplo019FuncionesAprobados {
     public static void main(String[] args) {
         int[] numer = new int[]{2,5,7,9,10,1,2};
         System.out.println("aprobados: "+ aprobados(numer));
