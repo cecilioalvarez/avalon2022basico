@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/javabasico2.iml" filepath="$PROJECT_DIR$/javabasico2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/avalon2022basico101.iml" filepath="$PROJECT_DIR$/src/avalon2022basico101.iml" />
     </modules>
   </component>
 </project>

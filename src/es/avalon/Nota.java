@@ -1,25 +1,26 @@
 package es.avalon;
 
 public class Nota {
-    public class NotaAlta {
-        public static void main(String[] args){
 
-            int[] notasF = new int[{1,2}];
+        public static void main(String[] args) {
+
+            int[] notasF = new int[]{1, 2};
 
             System.out.println(notas(notasF));
 
         }
 
-        static Integer notas (int [] notas){
+        static Integer notas(int[] notas) {
             int NotaMasAlta = 0;
-            for (i=0;i<notas.length;i++){
-                if (notas[i] > NotaMasAlta){
+            for (int i = 0; i < notas.length; i++) {
+                if (notas[i] > NotaMasAlta) {
 
-                    NotaMasAlta=notas[i];
+                    NotaMasAlta = notas[i];
                 }
 
 
             }
             return NotaMasAlta;
         }
-}
+    }
+
