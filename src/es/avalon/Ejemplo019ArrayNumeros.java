@@ -10,6 +10,7 @@ public class Ejemplo019ArrayNumeros {
 
         System.out.println(aprobados(notas));
         System.out.println(suspendidos(notas));
+        System.out.println(notaMasAlta(notas));
     }
 
     static int aprobados(int[] notas){
@@ -36,5 +37,18 @@ public class Ejemplo019ArrayNumeros {
         }
 
         return cantidad;
+    }
+
+    static int notaMasAlta(int[] notas){
+
+        int nota = 0;
+
+        for(int i=0; i<notas.length; i++){
+            if(notas[i]> nota){
+                nota = notas[i];
+            }
+        }
+
+        return nota;
     }
 }
