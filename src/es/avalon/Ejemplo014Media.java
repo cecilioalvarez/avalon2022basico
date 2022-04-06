@@ -11,8 +11,7 @@ public class Ejemplo014Media {
             sumaNotas = notas[i] + sumaNotas;
         }
 
-        double notaMedia = sumaNotas / notas.length;
-        System.out.println(notaMedia);
+        System.out.println(sumaNotas / notas.length);
 
     }
 }
