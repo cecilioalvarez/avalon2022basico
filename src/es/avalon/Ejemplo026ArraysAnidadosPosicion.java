@@ -1,6 +1,7 @@
 package es.avalon;
 
-public class Ejemplo025ArraysAnidados {
+public class Ejemplo026ArraysAnidadosPosicion {
+
     public static void main(String[] args) {
 
         int[] lista1= new int[]{1,2,3};
@@ -17,7 +18,7 @@ public class Ejemplo025ArraysAnidados {
             // me recorre la 0 y la 1 en dos vueltas
             for (int j=0;j<listaArrays[i].length;j++) {
 
-                System.out.println(listaArrays[i][j]);
+                System.out.println("[" +i +","+j+"]=" +listaArrays[i][j]);
                 total+= listaArrays[i][j];
             }
         }
@@ -28,6 +29,5 @@ public class Ejemplo025ArraysAnidados {
 
         System.out.println(total);
     }
-
 
 }
