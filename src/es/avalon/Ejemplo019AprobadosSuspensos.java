@@ -3,8 +3,9 @@ package es.avalon;
 public class Ejemplo019AprobadosSuspensos {
     public static void main(String[] args) {
         int[] numeros= new int[] {2,5,7,9,10,1,2};
-        System.out.println(aprobados(numeros));
-        System.out.println(suspensos(numeros));
+       //System.out.println(aprobados(numeros));
+       // System.out.println(suspensos(numeros));
+        System.out.println(notaMayor(numeros));
     }
 
     static int aprobados(int[] numeros) {
@@ -30,4 +31,16 @@ public class Ejemplo019AprobadosSuspensos {
         return totalSuspensos;
 
     }
+
+    static int notaMayor(int[] numeros) {
+        int notaMayor=0;
+        for (int i=0;i<numeros.length;i++) {
+
+            if( notaMayor<numeros[i]) {
+                notaMayor=numeros[i];
+            }
+        }
+        return notaMayor;
+    }
 }
+
