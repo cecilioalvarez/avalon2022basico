@@ -10,10 +10,19 @@ public class ejemploArraysAnidados {
 
         System.out.println(listaArrays[0][0]);
 
-        for (int i=0; i<listaArrays.length;i++){
-            for(int x=0;x<listaArrays[i].length;x++){
+        extraer(listaArrays);
+    }
+
+    private static void extraer(int[][] listaArrays) {
+        int suma=0;
+        for (int i = 0; i< listaArrays.length; i++){
+
+            for(int x = 0; x< listaArrays[i].length; x++){
                 System.out.println(listaArrays[i][x]);
+                suma+=listaArrays[i][x];
             }
+            System.out.println(suma);
         }
     }
+
 }
