@@ -6,7 +6,6 @@ public class Ejemplo019EjercicioArray {
         int numeros [] = new int[]{2,5,7,9,10,1,2};
                 System.out.println(Aprobados(numeros));
                 System.out.println(Suspendidos(numeros));
-                System.out.println(NotaAlta(numeros));
     }
 
     static int Aprobados (int[] lista){
@@ -31,16 +30,6 @@ public class Ejemplo019EjercicioArray {
             }
         }
         return suspensos;
-    }
-    //ejercicio para averiguar la nota mas alta
-    static int NotaAlta (int[] lista){
-        int notaMasAlta = 0;
-        for (int i=0;i<lista.length;i++) {
-            if (notaMasAlta<lista[i]){
-                notaMasAlta=lista[i];
-            }
-        }
-        return notaMasAlta;
     }
 }
 
