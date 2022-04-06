@@ -1,12 +1,14 @@
 package es.avalon;
 
 public class Ejemplo017Funciones {
+
     public static void main(String[] args) {
         double suma = sumar(2, 3);
         System.out.println(suma);
         suma = sumar(85, 65);
         System.out.println(suma);
 
+        System.out.println("...........");
         System.out.println(sumar(2, 3));
         System.out.println(sumar(4, 6));
         System.out.println(sumar(7, 8));
