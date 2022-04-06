@@ -13,19 +13,17 @@ public class Ejemplo21NumeroMenor {
     }
 
      static int getMenor(int[] numeros, int[] numeros2) {
-        int menor= numeros[0];
+        int menor1 = getMenor(numeros);
+        int menor2 = getMenor(numeros2);
 
+        return getMenor(new int[] {menor1, menor2});
+     }
+
+    static int getMenor(int[] numeros) {
+        int menor = numeros[0];
         for (int i = 0; i< numeros.length; i++) {
-
             if (menor> numeros[i]) {
                 menor= numeros[i];
-            }
-        }
-
-        for (int i = 0; i< numeros2.length; i++) {
-
-            if (menor> numeros2[i]) {
-                menor= numeros2[i];
             }
         }
         return menor;

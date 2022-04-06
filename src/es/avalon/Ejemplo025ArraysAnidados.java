@@ -9,9 +9,11 @@ public class Ejemplo025ArraysAnidados {
         int suma=0;
 
         for (int i =0;i<listaArrays.length;i++){
-            for(int j = 0;j< listaArrays[i].length;j++){
-                suma= suma + listaArrays[i][j];
-                System.out.print(listaArrays[i][j]);
+            int[] listaAnidada = listaArrays[i];
+            for(int j = 0;j< listaAnidada.length;j++){
+                int numero = listaAnidada[j];
+                suma= suma + numero;
+                System.out.print(numero);
             }
         }
         System.out.println();

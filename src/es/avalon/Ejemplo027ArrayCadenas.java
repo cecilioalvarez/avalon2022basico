@@ -1,5 +1,8 @@
 package es.avalon;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Ejemplo027ArrayCadenas {
     public static void main(String[] args) {
         String[] lista= new String[]{"hola","que","tal","estas","tu"};
@@ -12,3 +15,5 @@ public class Ejemplo027ArrayCadenas {
         System.out.println(mayor);
     }
 }
+
+
