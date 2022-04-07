@@ -1,0 +1,8 @@
+package es.avalon.objetos.ejemplo08;
+
+public class Principal {
+    public static void main(String[] args){
+        LamparaTecho lt= new LamparaTecho(100,50,50);
+        System.out.println(lt.potenciatotalbombillas());
+    }
+}
