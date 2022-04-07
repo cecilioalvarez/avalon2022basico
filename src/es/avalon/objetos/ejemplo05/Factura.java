@@ -1,4 +1,4 @@
-package es.avalon.objetos.ejemplo01;
+package es.avalon.objetos.ejemplo05;
 
 public class Factura {
 
@@ -43,5 +43,12 @@ public class Factura {
     //Metodo
     double importeConIVA() {
         return importe * 1.21;
+    }
+
+    //Sobrecarga de metodos
+    double importeConIVA(int porcentaje) {
+        //Accedemos a la variable privada y calculamos un valor con ella
+        //Que retornaremos
+        return importe + importe*porcentaje/100;
     }
 }
