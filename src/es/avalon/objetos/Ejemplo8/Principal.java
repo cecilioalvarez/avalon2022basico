@@ -6,5 +6,9 @@ public class Principal {
         System.out.println(lt.potenciaTotal());
         lt.setBombilla(1,100);
         System.out.println(lt.potenciaTotal());
+
+        //int [] b=new int[] {30,40,50};
+        LamparaTecho lt1=new LamparaTecho(new int[] {30,40,50});
+        System.out.println(lt1.potenciaTotal());
     }
 }

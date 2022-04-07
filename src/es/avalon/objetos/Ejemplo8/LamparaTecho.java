@@ -1,18 +1,24 @@
 package es.avalon.objetos.Ejemplo8;
 
 public class LamparaTecho {
-    private int[] bombillas;
+    private int[] bombillas;//Variable de tipo array para la clase lampara
 
+    //constructor de la clase con dos variables que no son de la clase
     public LamparaTecho(int numeroBombillas, int potenciabombilla) {
-        bombillas=new int[numeroBombillas];
-        for(int i=0;i<bombillas.length;i++){
-            bombillas[i]=potenciabombilla;
+        bombillas = new int[numeroBombillas];
+        for (int i = 0; i < bombillas.length; i++) {
+            bombillas[i] = potenciabombilla;
         }
 
 
     }
-    public void setBombilla(int posicion,int potencia){
-        this.bombillas[posicion-1]=potencia;
+    //Constructor con variable que si es da la clase
+    public LamparaTecho(int[] bombillas) {
+        this.bombillas = bombillas;
+    }
+
+    public void setBombilla(int posicion, int potencia) {
+        this.bombillas[posicion - 1] = potencia;
     }
 
     public int[] getBombillas() {
@@ -23,10 +29,10 @@ public class LamparaTecho {
         this.bombillas = bombillas;
     }
 
-    public int potenciaTotal(){
-        int total=0;
-        for (int i=0;i< bombillas.length;i++){
-            total+=bombillas[i];
+    public int potenciaTotal() {
+        int total = 0;
+        for (int i = 0; i < bombillas.length; i++) {
+            total += bombillas[i];
         }
         return total;
     }
