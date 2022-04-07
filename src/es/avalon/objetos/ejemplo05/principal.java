@@ -1,0 +1,16 @@
+package es.avalon.objetos.ejemplo05;
+
+public class principal {
+    public static void main(String[] args) {
+
+        Factura f1= new Factura();
+        f1.setNumero(1);
+        f1.setConcepto("ordenador");
+        f1.setImporte(200);
+        System.out.println(f1.getNumero());
+        System.out.println(f1.getConcepto());
+        System.out.println(f1.getImporte());
+        System.out.println(f1.importeConIVA());
+        System.out.println(f1.importeConIVA(30));
+    }
+}
