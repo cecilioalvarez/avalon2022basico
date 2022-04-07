@@ -26,9 +26,13 @@ public class Factura {
     public double getImporte() {
         return importe;
     }
-
+    //Aumenta la encapsulación
     public void setImporte(double importe) {
-        this.importe = importe;
+        if (importe < 100) {
+            this.importe = importe;
+        }else {
+            this.importe = 100;
+        }
     }
 
     //metodo que no recibe parametro pero devuelve un valor
