@@ -1,8 +1,15 @@
-package es.avalon.objetos.Ejemplo3;
+package es.avalon.objetos.Ejemplo4;
 
 public class Nota {
     private String asignatura;
     private int valor;
+
+
+
+    public Nota(String asignatura, int valor) {
+        setAsignatura(asignatura);
+        setValor(valor);
+    }
 
     public String getAsignatura() {
         return asignatura;
