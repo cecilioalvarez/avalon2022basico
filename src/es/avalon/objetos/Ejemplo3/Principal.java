@@ -4,8 +4,9 @@ public class Principal {
     public static void main(String[] args) {
         Nota n1=new Nota();
         n1.setAsignatura("Matematicas");
-        n1.setValor(7);
+        n1.setValor(20);
 
         n1.aprobado();
+        System.out.println(n1.getValor());
     }
 }

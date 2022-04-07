@@ -17,7 +17,12 @@ public class Nota {
     }
 
     public void setValor(int valor) {
-        this.valor = valor;
+        if (valor>10){
+            this.valor=10;
+        }else if (valor<0){
+            this.valor=0;
+        }else{
+        this.valor = valor;}
     }
 
     public void aprobado(){
