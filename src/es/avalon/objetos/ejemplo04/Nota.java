@@ -5,8 +5,8 @@ public class Nota {
     private double nota;
     //es lo que la identifica como funcion de construccion del objeto
     public Nota(String asignatura, double nota) {
-        this.asignatura = asignatura;
-        this.nota = nota;
+        setAsignatura(asignatura);
+        setNota(nota);
     }
 
     public String getAsignatura() {
