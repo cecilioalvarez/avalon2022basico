@@ -5,6 +5,6 @@ public class PotenciaTotal {
 
         LamparaTecho lampara= new LamparaTecho(20,200,1);
 
-        System.out.println(lampara.PTotal());
+        System.out.println(lampara.pTotal());
     }
 }

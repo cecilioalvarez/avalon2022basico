@@ -37,7 +37,7 @@ public class LamparaTecho {
         this.bombilla3=bombilla3;
     }
 
-    int PTotal(){
+    int pTotal(){
         return getBombilla1()+getBombilla2()+getBombilla3();
     }
 }
