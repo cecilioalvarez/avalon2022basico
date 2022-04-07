@@ -1,4 +1,4 @@
-package es.avalon.objetos;
+package es.avalon.objetos.ejemplo003;
 
 public class Principal {
     public static void main(String[] args) {

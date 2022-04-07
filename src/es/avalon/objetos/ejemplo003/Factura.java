@@ -1,4 +1,4 @@
-package es.avalon.objetos;
+package es.avalon.objetos.ejemplo003;
 
 public class Factura {
 
@@ -26,13 +26,16 @@ public class Factura {
         return importe;
     }
 
+    //Aumenta la encapsulacion
     public void setImporte(double importe) {
-        this.importe = importe;
+        if(importe<=100){
+            this.importe=importe;
+        }else{
+            this.importe=100;
+        }
     }
 
 
-
-    //metodo IVA
     double importeIva(){
         return importe*1.21;
     }
