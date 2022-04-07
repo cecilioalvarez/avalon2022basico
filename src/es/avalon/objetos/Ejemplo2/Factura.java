@@ -27,7 +27,11 @@ public class Factura {
     }
 
     public void setImporte(double importe) {
-        this.importe = importe;
+        if(importe<=100) {
+            this.importe = importe;
+        }else {
+            this.importe=100;
+        }
     }
 
     double importeConIVA(double iva) {
