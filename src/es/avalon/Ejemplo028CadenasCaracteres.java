@@ -13,5 +13,14 @@ public class Ejemplo028CadenasCaracteres {
                     System.out.println(caracter);
                 }
         }
+        imprimir10Holas();
+    }
+
+    public static void imprimir10Holas() {
+
+        for(int i=0;i<10;i++) {
+
+            System.out.println("hola");
+        }
     }
 }
