@@ -6,6 +6,10 @@ public class Factura {
     int numero;
     String concepto;
     double importe;
+    // metodo
+    double importeConIVA() {
 
+        return importe*1.21;
+    }
 
 }
