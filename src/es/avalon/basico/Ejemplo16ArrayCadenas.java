@@ -1,0 +1,13 @@
+package es.avalon.basico;
+
+public class Ejemplo16ArrayCadenas {
+    public static void main(String[] args) {
+
+        String [] listaTextos= new String[] { "hola","que","tal","estas"};
+        
+        for (int i=0;i<listaTextos.length;i++) {
+            System.out.println(listaTextos[i]);
+        }
+        
+    }
+}
