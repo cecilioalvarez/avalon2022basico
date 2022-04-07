@@ -6,11 +6,12 @@ public class Principal {
 
         Factura f1 = new Factura();
 
-        f1.numero = 1;
-        f1.concepto = "Ordenador";
-        f1.importe = 200;
-        System.out.println(f1.numero);
-        System.out.println(f1.concepto);
-        System.out.println(f1.importe);
+        f1.setNumero(1);
+        f1.setConcepto("ordenador");
+        f1.setImporte(200);
+        System.out.println(f1.getNumero());
+        System.out.println(f1.getConcepto());
+        System.out.println(f1.getImporte());
+        System.out.println(f1.importeConIVA());
     }
 }
