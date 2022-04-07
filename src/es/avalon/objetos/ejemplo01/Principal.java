@@ -9,5 +9,6 @@ public class Principal {
         System.out.println(f1.numero);
         System.out.println(f1.concepto);
         System.out.println(f1.importe);
+        System.out.println(f1.importeConIVA());
     }
 }
