@@ -28,11 +28,11 @@ public class Rectangulo {
     }
 
     double area(){
-        return lado1*lado2;
+        return getLado1()*getLado2();
     }
 
     double perimetro() {
-        return lado1*2+lado2*2;
+        return getLado1()*2+getLado2()*2;
     }
 
 }
