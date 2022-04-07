@@ -1,10 +1,14 @@
-package Objetos.Ejemplo003;
+package Objetos.Ejemplo004;
 
 public class Nota {
 
    private String Asignatura;
    private double nota;
-    public Nota(){//constructor
+    public Nota(String Asignatura,double nota){//constructor
+       this.nota=nota;
+       this.Asignatura="default";
+   }
+   public Nota(){
 
    }
 
