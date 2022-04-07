@@ -41,4 +41,10 @@ public class LamparaTecho {
     public int total(){
         return Bombilla1+Bombilla2+Bombilla3;
     }
+
+    public void change(int uno, int dos, int tres){
+        this.setBombilla1(uno);
+        this.setBombilla2(dos);
+        this.setBombilla3(tres);
+    }
 }

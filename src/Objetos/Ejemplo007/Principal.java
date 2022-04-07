@@ -9,9 +9,8 @@ public class Principal {
         System.out.println(l.getBombilla2());
         System.out.println(l.getBombilla3());
         System.out.println(l.total());
-        l.setBombilla1(5);
-        l.setBombilla2(25);
-        l.setBombilla3(35);
+        l.change(5,25,35);
+
         System.out.println("nuevo valores");
         System.out.println(l.getBombilla1());
         System.out.println(l.getBombilla2());
