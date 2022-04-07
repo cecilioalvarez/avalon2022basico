@@ -1,4 +1,4 @@
-package es.avalon.objetos.ejemplo02;
+package es.avalon.objetos.ejemplo05;
 
 public class Factura {
     // es una definicion de una clase a nivel general
@@ -43,6 +43,11 @@ public class Factura {
         //Estoy accediendo a la variable privada
         // y calculando un valor con ella
         return importe * 1.21;
+    }
+    double importeConIVA(int porcentaje) {
+        //Estoy accediendo a la variable privada
+        // y calculando un valor con ella
+        return importe + importe*porcentaje/100;
     }
 
 }
