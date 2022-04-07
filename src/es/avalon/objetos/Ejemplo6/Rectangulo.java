@@ -1,8 +1,8 @@
 package es.avalon.objetos.Ejemplo6;
 
 public class Rectangulo {
-    double lado1;
-    double lado2;
+    private double lado1;
+    private double lado2;
 
     public Rectangulo(double lado1, double lado2) {
         setLado1(lado1);
