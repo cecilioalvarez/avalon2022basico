@@ -1,5 +1,7 @@
 package es.avalon.objetos.ejemplo01;
 
+import es.avalon.objetos.ejemplo02.Nota;
+
 public class Principal {
 
     public static void main(String[] args) {
@@ -13,5 +15,6 @@ public class Principal {
         System.out.println(f1.getConcepto());
         System.out.println(f1.getImporte());
         System.out.println(f1.importeConIVA());
+
     }
 }
