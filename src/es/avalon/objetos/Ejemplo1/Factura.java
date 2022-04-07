@@ -1,4 +1,4 @@
-package es.avalon.objetos.ejemplo1;
+package es.avalon.objetos.Ejemplo1;
 
 public class Factura {
 
