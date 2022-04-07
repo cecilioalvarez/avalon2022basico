@@ -22,12 +22,17 @@ public class Rectangulo {
         this.lado2 = lado2;
     }
 
-    double area(double lado1, double lado2){
+    public Rectangulo(double lado1,double lado2){
+        this.lado1=lado1;
+        this.lado2=lado2;
+    }
+
+    double area(){
         return lado1*lado2;
     }
 
-    double perimetro(double lado1, double lado2){
-        return lado1*2 + lado2*2;
+    double perimetro(){
+        return lado1*2+lado2*2;
     }
 
 }
