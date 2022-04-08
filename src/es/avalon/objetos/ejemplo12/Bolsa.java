@@ -32,4 +32,14 @@ public class Bolsa {
     public void setPesoBolsa(double pesoBolsa) {
         this.pesoBolsa = pesoBolsa;
     }
+
+    public double getPesoTotal() {                   
+                                                  
+        double total = 0;                            
+                                                     
+        for (int i = 0; i < productos.size(); i++) { 
+            total= total+productos.get(i).getPeso(); 
+        }                                            
+        return total;                                
+    }                                                
 }

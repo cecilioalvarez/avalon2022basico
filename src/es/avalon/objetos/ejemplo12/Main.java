@@ -13,10 +13,9 @@ public class Main {
         System.out.println(bolsa1.getColor());
 
         ArrayList<Producto> nuevosProducto = bolsa1.getProducto();
-        for (int i = 0; i <nuevosProducto.size();i++){
-            System.out.println(nuevosProducto.get(i).getPeso());
-            System.out.println(nuevosProducto.get(i).getNombre());
+            System.out.println(bolsa1.getPesoTotal());
+
 
         }
     }
-}
+
