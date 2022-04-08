@@ -1,4 +1,4 @@
-package es.avalon.objetos.ejercicio03ArrayListObjetosAnidados;
+package es.avalon.objetos.ejercicio03Bolsa;
 
 import java.util.ArrayList;
 
@@ -28,7 +28,6 @@ public class Bolsa {
             System.out.println("Producto nº" + (i+1) + ": " + bolsa.getProductos().get(i).getNombre() + " con un peso de " + bolsa.getProductos().get(i).getPeso() + " kg");
         }
     }
-
 
 
     public Bolsa(String color) {

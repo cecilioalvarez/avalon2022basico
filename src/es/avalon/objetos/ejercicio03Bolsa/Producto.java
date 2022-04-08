@@ -1,4 +1,4 @@
-package es.avalon.objetos.ejercicio03ArrayListObjetosAnidados;
+package es.avalon.objetos.ejercicio03Bolsa;
 
 public class Producto {
 
