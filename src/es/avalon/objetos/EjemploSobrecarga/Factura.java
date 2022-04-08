@@ -1,10 +1,13 @@
 package es.avalon.objetos.EjemploSobrecarga;
 
+import java.util.Date;
+
 public class Factura {
 
     private String concepto;
     private double importe;
     private int numero;
+    public static int IMPORTE = 100;
 
     public int getNumero() {
         return numero;
@@ -28,10 +31,10 @@ public class Factura {
 
     //Aumenta la encapsulacion
     public void setImporte(double importe) {
-        if(importe<=100){
+        if(importe<=IMPORTE){
             this.importe=importe;
         }else{
-            this.importe=100;
+            this.importe=IMPORTE;
         }
     }
 
