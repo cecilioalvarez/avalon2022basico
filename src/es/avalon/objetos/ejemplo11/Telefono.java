@@ -21,7 +21,7 @@ public class Telefono {
     }
 
     public Telefono(String marca, int numero) {
-        this.marca = marca;
-        this.numero = numero;
+       setMarca(marca);
+       setNumero(numero);
     }
 }
