@@ -11,6 +11,7 @@ public class Principal {
         Telefono t=new Telefono("Samsung",555);
         p3.setTelefono(t);
         System.out.println(p3.getTelefono().getNumero());
+        System.out.println(p3.getTelefono().getMarca());
 
         //System.out.println(p.getNombre());
     }
