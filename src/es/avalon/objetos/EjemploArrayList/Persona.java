@@ -1,6 +1,6 @@
-package es.avalon.objetos.EjemploPersona;
+package es.avalon.objetos.EjemploArrayList;
 
-import es.avalon.objetos.EjemploArrayList.Chaqueta;
+import es.avalon.objetos.EjemploPersona.Telefono;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ public class Persona {
     private String dni;
     private int edad;
     private String nombre;
-    private Telefono telefono;
+    private es.avalon.objetos.EjemploPersona.Telefono telefono;
     private ArrayList<Chaqueta> chaquetas= new ArrayList<>();
 
     public ArrayList<Chaqueta> getChaquetas(){
@@ -24,7 +24,7 @@ public class Persona {
 
 
 
-    public Telefono getTelefono() {
+    public es.avalon.objetos.EjemploPersona.Telefono getTelefono() {
         return telefono;
     }
 
@@ -68,7 +68,7 @@ public class Persona {
 
     }
 
-    public Persona (){
+    public Persona(){
 
     }
 }
