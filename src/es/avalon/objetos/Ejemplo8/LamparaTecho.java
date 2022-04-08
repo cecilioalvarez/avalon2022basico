@@ -4,6 +4,7 @@ public class LamparaTecho {
     private int[] bombillas;//Variable de tipo array para la clase lampara
 
     //constructor de la clase con dos variables que no son de la clase
+    //Variables declaradas: int numeroBombillas, int potenciabonbillas, array bombillas.
     public LamparaTecho(int numeroBombillas, int potenciabombilla) {
         bombillas = new int[numeroBombillas];
         for (int i = 0; i < bombillas.length; i++) {
@@ -35,6 +36,15 @@ public class LamparaTecho {
             total += bombillas[i];
         }
         return total;
+    }
+    public void mostrarLampara (){
+        for (int i=0;i< bombillas.length;i++){
+            System.out.println(bombillas[i]);
+        }
+    }
+    public void getBombilla(int posicion){
+        System.out.println(this.bombillas[posicion]);
+
     }
 
 }
