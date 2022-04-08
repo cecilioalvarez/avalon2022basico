@@ -16,12 +16,14 @@ public class Principal {
 
 
         }
-        System.out.println(b1.pesoProductos(b1.getProductos()));
+        System.out.println(b1.pesoProductos());
         int peso=0;
         for (int i=0;i<b1.getProductos().size();i++){
             peso+=b1.getProductos().get(i).getPeso();
 
         }
         System.out.println(peso);
+
+        System.out.println(b1.getProductos().get(0).getNombre());
     }
 }

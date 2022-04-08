@@ -32,7 +32,7 @@ public class Bolsa {
     }
 
 
-    public int pesoProductos(ArrayList <Producto> productos){
+    public int pesoProductos(){
         int pesoTotal=0;
         for (int i=0;i<productos.size();i++) {
             pesoTotal += productos.get(i).getPeso();

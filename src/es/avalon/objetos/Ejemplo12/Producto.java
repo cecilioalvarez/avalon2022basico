@@ -2,7 +2,7 @@ package es.avalon.objetos.Ejemplo12;
 
 public class Producto {
     String nombre;
-    int peso;
+    private int peso;
 
     public Producto(String nombre, int peso) {
         this.nombre = nombre;
@@ -10,6 +10,7 @@ public class Producto {
     }
 
     public Producto(int peso) {
+
         this.peso = peso;
     }
 
