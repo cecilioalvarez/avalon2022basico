@@ -29,4 +29,26 @@ public class Bolsa {
     public Bolsa(String color) {
         this.color = color;
     }
+
+    //una forma de dividir la responsabildiad entre objetos
+    public double getPrecioTotal() {
+        double total=0;
+
+        for (int i=0;i<productos.size();i++) {
+
+           total=total+ productos.get(i).getPrecio();
+        }
+        return total;
+    }
+
+    // una funcion recibe un parametro y opera sobre el
+    public   double getPrecioTotal( ArrayList<Producto> productos) {
+        double total=0;
+
+        for (int i=0;i<productos.size();i++) {
+
+            total=total+ productos.get(i).getPrecio();
+        }
+        return total;
+    }
 }
