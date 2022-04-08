@@ -10,9 +10,15 @@ public class Bombilla {
     }
     public void on() {
         encendida=true;
+        System.out.println(" bombilla encendida: " + getId());
     }
     public void off () {
         encendida=false;
+        System.out.println(" bombilla apagada" + getId());
+    }
+
+    public Bombilla(int id) {
+        this.id = id;
     }
 
     public int getId() {

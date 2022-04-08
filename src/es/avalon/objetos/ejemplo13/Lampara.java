@@ -19,4 +19,8 @@ public class Lampara {
     public void off() {
         bombilla.off();
     }
+
+    public Lampara(Bombilla bombilla) {
+        this.bombilla = bombilla;
+    }
 }
