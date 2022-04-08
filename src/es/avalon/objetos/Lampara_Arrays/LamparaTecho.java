@@ -14,10 +14,13 @@ public class LamparaTecho {
         this.bombillas = bombillas;
     }
 
+
+
     public void setBombilla(int posicion, int potencia){
         if (posicion>=0 && posicion< bombillas.length)
         this.bombillas[posicion]=potencia;
     }
+
 
     public LamparaTecho(int numeroBombillas, int potenciaBombilla){
         bombillas= new int[numeroBombillas];
