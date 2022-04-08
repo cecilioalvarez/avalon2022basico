@@ -16,6 +16,6 @@ public class Principal {
 
 
         }
-        System.out.println(b1.pesoProductos(productos));
+        System.out.println(b1.pesoProductos(b1.getProductos()));
     }
 }
