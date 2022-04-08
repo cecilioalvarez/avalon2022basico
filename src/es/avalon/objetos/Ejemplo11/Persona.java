@@ -10,7 +10,7 @@ public class Persona {
     private String dni;
     Telefono telefono;
     private ArrayList<Chaqueta>chaquetas=new ArrayList<Chaqueta>();
-
+    //Contructor con solo DNI
     public Persona(String dni) {
         this.dni = dni;
     }
@@ -60,6 +60,7 @@ public class Persona {
     public void setTelefono(Telefono telefono) {
         this.telefono = telefono;
     }
+    //Metodo para añadir chaquetas a la persona
     public void addChaqueta(Chaqueta chaqueta){
         chaquetas.add(chaqueta);
     }
