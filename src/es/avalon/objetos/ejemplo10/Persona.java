@@ -5,6 +5,16 @@ public class Persona {
     private String dni;
     private String nombre;
     private int edad;
+    private Telefono telefono;
+
+
+    public Telefono getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(Telefono telefono) {
+        this.telefono = telefono;
+    }
 
     public String getDni() {
         return dni;
