@@ -11,6 +11,26 @@ public class Bolsa {
         productos.add(producto);
     }
 
+    public double getPesoTotal() {
+        double total = 0;
+
+        for(int i=0; i<productos.size(); i++){
+            total = total + productos.get(i).getPeso();
+        }
+
+        return total;
+    }
+
+    //Funcion en el que le pasamos una bolsa y nos devuelve los productos que contiene
+    public static void productosBolsa(Bolsa bolsa){
+        System.out.println("\nLos productos de la bolsa " + bolsa.getColor() + " son los siguientes: \n");
+        for (int i = 0; i<bolsa.getProductos().size(); i++){
+            System.out.println("Producto nº" + (i+1) + ": " + bolsa.getProductos().get(i).getNombre() + " con un peso de " + bolsa.getProductos().get(i).getPeso() + " kg");
+        }
+    }
+
+
+
     public Bolsa(String color) {
         this.color = color;
     }
