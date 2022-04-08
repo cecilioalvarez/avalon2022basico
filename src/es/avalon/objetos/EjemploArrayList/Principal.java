@@ -9,5 +9,6 @@ public class Principal {
         ArrayList<Telefono> lista= new ArrayList<Telefono>();
         lista.add(new Telefono(123456789, "apple");
 
+
     }
 }
