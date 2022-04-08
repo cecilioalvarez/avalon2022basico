@@ -14,5 +14,14 @@ public class Principal2 {
             System.out.println(chaquetas.get(i).getPrecio());
         }
 
+        chaquetas.add(new Chaqueta("verde",80));
+        System.out.println(chaquetas.size());
+        System.out.println(chaquetas.get(0).getColor());
+        for (int i=0;i<chaquetas.size();i++){
+            System.out.println(chaquetas.get(i).getColor());
+            System.out.println(chaquetas.get(i).getPrecio());
+        }
+
+
     }
 }
