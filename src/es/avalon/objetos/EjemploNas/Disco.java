@@ -3,7 +3,6 @@ package es.avalon.objetos.EjemploNas;
 public class Disco {
     private int idDisco;
     private int capacidad;
-    private boolean conectado;
 
 
     public int getIdDisco() {
@@ -25,16 +24,6 @@ public class Disco {
     public Disco(int idDisco, int capacidad){
         this.idDisco=idDisco;
         this.capacidad=capacidad;
-    }
-
-    public void discoOn(){
-        conectado= true;
-        System.out.println("\n El Disco: " + getIdDisco() + " Está conectado");
-    }
-
-    public void discoOff(){
-        conectado=false;
-        System.out.println("\n El Disco: " + getIdDisco() + " No está conectado o no tiene capacidad");
     }
 
 }
