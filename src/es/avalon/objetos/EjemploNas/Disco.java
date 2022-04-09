@@ -1,7 +1,5 @@
 package es.avalon.objetos.EjemploNas;
 
-import es.avalon.objetos.GenerateRandom;
-
 public class Disco {
     private int idDisco;
     private int capacidad;
