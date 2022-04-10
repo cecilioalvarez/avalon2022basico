@@ -21,12 +21,12 @@ public class Ordenador {
 
     public void conectado(){
         tieneNas= true;
-        System.out.println("\n El Ordenador: " + getId() + " Está conectado al Nas");
+        System.out.println("\n El Ordenador Nº" + getId() + " Está conectado al Nas");
     }
 
     public void desconectado(){
         tieneNas=false;
-        System.out.println("\n El Ordenador: " + getId() + " No está conectado al Nas ");
+        System.out.println("\n El Ordenador Nº" + getId() + " No está conectado al Nas ");
     }
 
     public int getId() {
