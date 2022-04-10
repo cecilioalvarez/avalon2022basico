@@ -13,7 +13,7 @@ public class Main {
         int idDisco = CERO;
         Nas nas=new Nas();
 
-        for(int y=0; y<nNas; y++) {
+        for(int y=CERO; y<nNas; y++) {
             idDisco++;
             Random r = new Random();
             int capacidad = r.nextInt(DIEZ)+UNO;
@@ -22,9 +22,9 @@ public class Main {
         System.out.println("\n");
 
         ArrayList<Disco> raid = nas.getDisco();
-        int totalCapacidad=0;
+        int totalCapacidad=CERO;
 
-        for (int x=0; x<raid.size();x++) {
+        for (int x=CERO; x<raid.size();x++) {
                 totalCapacidad=totalCapacidad+raid.get(x).getCapacidad();
                 System.out.println("El disco: " + raid.get(x).getIdDisco() + " Tiene una capacidad de: " + raid.get(x).getCapacidad() + "TB");
         }
