@@ -6,8 +6,6 @@ public class Nas {
 
     private int idNas;
     private int tamano;
-    private Ordenador ordenador;
-    private Disco disco;
     private ArrayList<Disco> discos= new ArrayList<Disco>();
 
     public int getIdNas() {
@@ -38,16 +36,4 @@ public class Nas {
     public void addDisco(Disco disco){
         discos.add(disco);
     }
-
-    public void conectado() {ordenador.conectado();
-    }
-
-    public void desconectado() {ordenador.desconectado();
-    }
-
-    /*public void discoON() {disco.discoOn();
-    }
-
-    public void discoOff() {disco.discoOff();
-    }*/
 }

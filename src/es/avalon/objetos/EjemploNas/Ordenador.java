@@ -1,5 +1,9 @@
 package es.avalon.objetos.EjemploNas;
 
+import java.util.Random;
+
+import static es.avalon.objetos.Constant.UNO;
+
 public class Ordenador {
 
     private int idOrdenador;

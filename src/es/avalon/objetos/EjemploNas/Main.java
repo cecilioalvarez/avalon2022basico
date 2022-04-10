@@ -34,8 +34,8 @@ public class Main {
         System.out.println("\n La capacidad total del Nas es de: " + totalCap + "TB");
 
 
-        Random numPc=new Random();
-        int nPc = numPc.nextInt(9)+UNO;
+        Random numPc = new Random();
+        int nPc = numPc.nextInt(9) + UNO;
         Ordenador pc=new Ordenador();
         pc.setIdOrdenador(nPc);
 
