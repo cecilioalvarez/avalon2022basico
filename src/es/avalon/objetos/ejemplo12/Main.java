@@ -1,7 +1,5 @@
 package es.avalon.objetos.ejemplo12;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
         Bolsa bolsa1 = new Bolsa();
@@ -12,8 +10,7 @@ public class Main {
 
         System.out.println(bolsa1.getColor());
 
-        ArrayList<Producto> nuevosProducto = bolsa1.getProducto();
-            System.out.println(bolsa1.getPesoTotal());
+        System.out.println(bolsa1.getPesoTotal());
 
 
         }
