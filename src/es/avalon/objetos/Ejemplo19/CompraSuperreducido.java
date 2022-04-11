@@ -8,7 +8,7 @@ public class CompraSuperreducido extends Compra{
 
     @Override
     public double getImporte1() {
-        return super.getImporte()*;
+        return super.getImporte()*1.04;
     }
 }
 
