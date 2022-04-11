@@ -1,14 +1,8 @@
 package es.avalon.objetos.ejemplo16;
 
-public class Coche {
+public abstract class Coche {
 
-    public void girar() {
+    public  abstract void girar();
 
-        System.out.println("el coche  gira");
-    }
-
-    public void cambiarMarcha() {
-
-        System.out.println("el coche  cambia de marcha");
-    }
+    public  abstract void cambiarMarcha();
 }
