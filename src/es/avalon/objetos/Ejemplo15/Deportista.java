@@ -21,4 +21,9 @@ public class Deportista extends Persona{
     public Deportista(String deporte) {
         this.deporte = deporte;
     }
+
+    @Override//sobreescribimos el metodo andar sobre la clase deportista para que la respuesta sea diferente
+    public void andar() {
+        System.out.println(getNombre()+" anda a 10km/h");
+    }
 }
