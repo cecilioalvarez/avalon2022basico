@@ -5,5 +5,9 @@ public class Main {
 
         Persona p=new Persona("David","72015912X");
         System.out.println(p);
+
+        Persona p1=new Persona("David","72015912X");
+        System.out.println(p.equals(p1));
+
     }
 }
