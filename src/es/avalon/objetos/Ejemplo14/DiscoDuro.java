@@ -1,11 +1,11 @@
 package es.avalon.objetos.Ejemplo14;
 
 public class DiscoDuro {
+    //los discos duros solo tienen como variable la capacidad
+     private double capacidad;
 
-    double capacidad;
-
-    public DiscoDuro(double capacidad) {
-        this.capacidad = capacidad;
+    public DiscoDuro() {
+        setCapacidad(capacidad);
     }
 
     public double getCapacidad() {
