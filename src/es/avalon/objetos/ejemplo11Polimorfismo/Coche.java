@@ -1,12 +1,9 @@
 package es.avalon.objetos.ejemplo11Polimorfismo;
 
-public class Coche {
+//Concepto de abstraccion es sacar un factor comun de ciertas propiedades
+//Al hacer abstracta la clase coche no podremos crear objetos de este, pero si usar sus funcionalidades
+public abstract class Coche {
 
-    public void girar(){
-        System.out.println("El coche gira");
-    }
-
-    public void cambiarMarcha(){
-        System.out.println("El coche cambia de marcha");
-    }
+    public abstract void girar();
+    public abstract void cambiarMarcha();
 }
