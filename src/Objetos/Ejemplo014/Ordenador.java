@@ -2,7 +2,7 @@ package Objetos.Ejemplo014;
 
 import java.util.ArrayList;
 
-public class Ordenador {
+public class Ordenador{
     private Disco disco;
     private NAS nas;
 
