@@ -1,4 +1,4 @@
-package es.avalon;
+package es.avalon.Basico;
 
 public class Ejemplo005IfElseIf {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package es.avalon;
+package es.avalon.Basico;
 
 public class Ejemplo001Hola {
 
