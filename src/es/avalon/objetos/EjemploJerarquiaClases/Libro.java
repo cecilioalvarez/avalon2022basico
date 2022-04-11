@@ -1,4 +1,4 @@
-package es.avalon.JerarquiaClases;
+package es.avalon.objetos.EjemploJerarquiaClases;
 
 public class Libro extends Documento{
 
