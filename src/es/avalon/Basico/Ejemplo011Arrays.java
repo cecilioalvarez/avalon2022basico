@@ -11,6 +11,8 @@ public class Ejemplo011Arrays {
         System.out.println(lista[2]);
 
         for(int i=0;i<lista.length;i++){
-    }
+        }
     }
 }
+
+
