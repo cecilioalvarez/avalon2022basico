@@ -2,12 +2,6 @@ package es.avalon.objetos.ejemplo19;
 
 public class SinIVA extends Compra{
     @Override
-    public int getPrecio() {
-        return super.getPrecio();
+    public double getPrecio(){
+        return  getPrecio()*1.00;
     }
-
-    @Override
-    public void setPrecio(int precio) {
-        super.setPrecio(precio);
-    }
-}
