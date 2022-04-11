@@ -1,0 +1,46 @@
+package es.avalon.basico;
+
+public class Ejemplo019 {
+    public static void main(String[] args) {
+        int[] numeros= new int[] {2,5,7,9,10,1,2};
+        //System.out.println(aprobados(numeros));
+        //System.out.println(suspensos(numeros));
+        System.out.println(notaAlta(numeros));
+    }
+
+    static int aprobados(int[] numeros) {
+        int totalAprobados=0;
+        for (int i=0;i<numeros.length;i++) {
+
+            if( numeros[i]>=5) {
+                totalAprobados++;
+            }
+        }
+        return totalAprobados;
+
+    }
+
+    static int suspensos(int[] numeros) {
+        int totalSuspensos=0;
+        for (int i=0;i<numeros.length;i++) {
+
+            if( numeros[i]<5) {
+                totalSuspensos++;
+            }
+        }
+        return totalSuspensos;
+
+    }
+    static int notaAlta(int[] numeros) {
+        int notaAlta=0;
+        for (int i=0;i<numeros.length;i++) {
+
+            if( notaAlta<numeros[i]) {
+                notaAlta=numeros[i];
+            }
+        }
+        return notaAlta;
+
+
+    }
+}
