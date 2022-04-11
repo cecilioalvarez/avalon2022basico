@@ -1,4 +1,4 @@
-package es.avalon;
+package es.avalon.Basico;
 
 public class BucleFor {
     public static void main(String[] args) {
