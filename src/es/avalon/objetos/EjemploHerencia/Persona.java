@@ -29,6 +29,6 @@ public class Persona {
     }
 
     public void andar(){
-        System.out.println(getNombre() + "avanza a 5km/h");
+        System.out.println(getNombre() + " avanza a 5km/h");
     }
 }

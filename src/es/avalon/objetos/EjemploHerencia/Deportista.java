@@ -17,6 +17,6 @@ public class Deportista extends Persona{
     }
     @Override
     public void andar(){
-        System.out.println(getNombre() + "Anda a 7 Km/H");
+        System.out.println(getNombre() + " Anda a 7Km/H");
     }
 }
