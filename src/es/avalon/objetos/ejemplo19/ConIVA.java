@@ -5,10 +5,9 @@ public class ConIVA extends Compra{
     public ConIVA(double precio, int id, String concepto) {
         super(precio, id, concepto);
     }
+
     @Override
-    public double getPrecio(){
-        return  getPrecio()*1.10;
+    public double getPrecioConIVA() {
+        return  getPrecio()*1.21;
     }
-
-
 }

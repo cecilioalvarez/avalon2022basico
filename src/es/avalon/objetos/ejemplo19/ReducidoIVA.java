@@ -1,13 +1,11 @@
 package es.avalon.objetos.ejemplo19;
 
 public class ReducidoIVA extends Compra{
-    @Override
-    public int getPrecio() {
-        return super.getPrecio();
+    public ReducidoIVA(double precio, int id, String concepto) {
+        super(precio, id, concepto);
     }
-
     @Override
-    public void setPrecio(int precio) {
-        super.setPrecio(precio);
+    public double getPrecioConIVA() {
+        return  getPrecio()*1.10;
     }
 }

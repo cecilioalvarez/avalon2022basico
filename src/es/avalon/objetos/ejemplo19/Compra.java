@@ -35,4 +35,5 @@ public abstract class Compra {
         this.id = id;
         this.concepto = concepto;
     }
+    public abstract double getPrecioConIVA();
 }
