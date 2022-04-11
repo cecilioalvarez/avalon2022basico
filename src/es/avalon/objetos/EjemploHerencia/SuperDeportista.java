@@ -1,0 +1,13 @@
+package es.avalon.objetos.EjemploHerencia;
+
+public class SuperDeportista extends Deportista{
+
+    public SuperDeportista(String nombre, int edad, String deporte, int nivel) {
+        super(nombre, edad, deporte);
+        this.nivel=nivel;
+    }
+    @Override
+    public void andar(){
+        System.out.println(getNombre() + "anda a 10Km/H");
+    }
+}
