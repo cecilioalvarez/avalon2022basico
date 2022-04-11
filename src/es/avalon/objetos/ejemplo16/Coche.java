@@ -1,3 +1,4 @@
+
 package es.avalon.objetos.ejemplo16;
 
 public abstract class Coche {
