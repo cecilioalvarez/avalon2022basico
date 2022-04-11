@@ -6,7 +6,12 @@ public class Main {
         p.andar();
         Deportista raquel = new Deportista("raquel",32,"Karate");
         raquel.andar();
-        SuperDeportista miguel = new SuperDeportista("miguel",30,"Motociclismo",2);
-        miguel.andar();
+        Persona superDeportista = new SuperDeportista("miguel",30,"Motociclismo",2);
+        superDeportista.andar();
+
+
+        System.out.println("*********************************************************");
+        raquel.andar();
+        superDeportista.andar();
     }
 }
