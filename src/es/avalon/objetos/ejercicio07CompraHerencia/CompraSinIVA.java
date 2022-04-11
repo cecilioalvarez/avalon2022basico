@@ -1,4 +1,4 @@
-package es.avalon.objetos.ejercicio07Compra;
+package es.avalon.objetos.ejercicio07CompraHerencia;
 
 public class CompraSinIVA extends Compra{
 
