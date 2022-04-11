@@ -1,0 +1,16 @@
+package Objetos.Ejemplo019;
+
+public class IVA0 extends Compra{
+
+    public IVA0(int numero, String concepto, double coste) {
+        super(numero, concepto, coste);
+    }
+    @Override
+    public double valor(){
+        return  super.getCoste();
+    }
+    @Override
+    public double getIvaImporte() {
+        return valor()+(super.getCoste()*0.30);
+    }
+}
