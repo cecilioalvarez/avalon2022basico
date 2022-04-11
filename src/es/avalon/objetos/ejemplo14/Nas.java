@@ -5,14 +5,15 @@ import java.util.ArrayList;
 public class Nas {
     private String IdNas;
 
-    private ArrayList<DiscoDuro> HuecosDiscoDuro = new ArrayList<DiscoDuro>();
+    private final ArrayList<DiscoDuro> HuecosDiscoDuro = new ArrayList<>();
 
-    public ArrayList<DiscoDuro> getHuecosNas() {
-        return HuecosDiscoDuro;
-    }
+
     public void recorrerNas(){
-        for (int i = 0; i < HuecosDiscoDuro.size(); i++) {
-            System.out.print(HuecosDiscoDuro.get(i));
+        for (DiscoDuro datoDisco : HuecosDiscoDuro) {
+            System.out.println(datoDisco.getNombre() + ". Capacidad: " + datoDisco.getCapacidad() + "TB");
+            //La capacidad de los discos en el Nas es:
+            // Disco 1. Capacidad: 30GB
+
         }
     }
 
@@ -24,8 +25,8 @@ public class Nas {
     public double GetCapacidadTotal() {
         double total = 0;
 
-        for (int i = 0; i < HuecosDiscoDuro.size(); i++) {
-            total= total+HuecosDiscoDuro.get(i).getCapacidad();
+        for (DiscoDuro discoDuro : HuecosDiscoDuro) {
+            total = total + discoDuro.getCapacidad();
         }
         System.out.println("La capacidad total de los discos es: " );
         return total;
