@@ -1,15 +1,9 @@
 package Objetos.Ejemplo016;
 
-public class Coche {
+public abstract class   Coche {
     public Coche() {
     }
 
-    public void girar(){
-        System.out.println("el coche gira");
-
-    }
-    public void cambiarMarcha(){
-        System.out.println("cambia de marcha");
-
-    }
+    public abstract void girar();
+    public abstract void cambiarMarcha();
 }
