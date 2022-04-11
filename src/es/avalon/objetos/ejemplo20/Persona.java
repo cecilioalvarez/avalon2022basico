@@ -1,3 +1,4 @@
+
 package es.avalon.objetos.ejemplo20;
 
 import java.util.Objects;
