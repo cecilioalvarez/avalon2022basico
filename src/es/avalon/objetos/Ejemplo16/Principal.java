@@ -10,7 +10,7 @@ public class Principal {
         c.cambiarMarcha();
 
         System.out.println("..............");
-        Conductor c1=new Conductor(new Coche());
+        Conductor c1=new Conductor(new Golf());
         c1.cambiarMarcha();
         c1.girarCoche();
         c1.setCoche(new Kia());
