@@ -14,9 +14,9 @@ public class Bolsa {
         this.color = color;
     }
 
-    public void addProductos(Producto productos){
+    public void addProductos(Producto producto){
 
-        productos.add(productos);
+        productos.add(producto);
 
     }
 
@@ -28,8 +28,17 @@ public class Bolsa {
         this.productos = productos;
     }
 
-    public Bolsa(String color, ArrayList<Producto> productos) {
+    public Bolsa(String color) {
         this.color = color;
 
+    }
+
+    public double getPrecioTotal(){
+        double total=0;
+
+        for (int i=0; i<productos.size();i++){
+            total = total + productos.get(i).getPrecio();
+        }
+        return total;
     }
 }
