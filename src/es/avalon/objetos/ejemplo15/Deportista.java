@@ -16,4 +16,8 @@ public class Deportista extends  Persona{
         this.deporte = deporte;
 
     }
+    /*@Override
+    public void andar{
+        System.out.println(getNombre()+"anda a 7km hora");
+    }*/
 }

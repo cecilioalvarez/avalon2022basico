@@ -27,4 +27,7 @@ public class Persona {
     public Persona(){
 
     }
+    public void  andar (){
+        System.out.println(getNombre()+"anda a 5km hora");
+    }
 }
