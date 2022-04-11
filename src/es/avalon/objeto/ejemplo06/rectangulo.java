@@ -1,3 +1,4 @@
+
 package es.avalon.objeto.ejemplo06;
 
 public class rectangulo {
