@@ -4,7 +4,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Matematicas m= new Matematicas();
-        System.out.println(m.sumar(2,2));
+
+        System.out.println(Matematicas.sumar(2,2));
     }
 }
