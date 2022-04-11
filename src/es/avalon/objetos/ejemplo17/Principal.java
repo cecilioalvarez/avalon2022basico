@@ -4,7 +4,15 @@ public class Principal {
 
     public static void main(String[] args) {
 
+//        double resultado=Matematicas.sumar(2,2);
+//
+//        System.out.println(resultado);
 
-        System.out.println(Matematicas.sumar(2,2));
+        Persona p= new Persona("juan");
+        System.out.println(Persona.getContador());
+        Persona p1= new Persona("juan");
+        System.out.println(Persona.getContador());
+
+
     }
 }
