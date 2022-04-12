@@ -12,11 +12,6 @@ public class Main {
         } catch (IOException e) {
             imprimirResultadoPrograma(false);
         }
-
-
-
-
-
     }
     // es como si tengo una ventana
     public static void imprimirResultadoPrograma(boolean ejecutado) {
