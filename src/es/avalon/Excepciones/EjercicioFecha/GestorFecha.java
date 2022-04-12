@@ -12,7 +12,7 @@ public class GestorFecha {
 
 
     public int sumaDias(String fecha1, String fecha2, String fecha3) {
-        DateFormat formateador = new SimpleDateFormat("d/M/yy");
+        DateFormat formateador = new SimpleDateFormat("dd/M/yy");
         int total = 0;
         try {
             Date f1 = formateador.parse(fecha1);
