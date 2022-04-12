@@ -9,5 +9,6 @@ public class Principal {
         System.out.println(nota1.getNota());
         System.out.println(nota1.getAsignatura());
         System.out.println(nota1.estaAprobada());
+
     }
 }

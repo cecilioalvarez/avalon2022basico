@@ -26,7 +26,6 @@ public class Nota {
             }
 
         }
-
         public boolean estaAprobada() {
             return nota >= 5;
         }

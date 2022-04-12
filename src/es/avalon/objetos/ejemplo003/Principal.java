@@ -12,5 +12,6 @@ public class Principal {
         System.out.println(f.getConcepto());
         System.out.println(f.getImporte());
         System.out.println(f.importeIva());
+
     }
 }
