@@ -33,6 +33,6 @@ public class Pelicula implements Reproducible{
 
     @Override
     public void atras() {
-        System.out.println("Volver al anrterior frame");
+        System.out.println("Volver al anterior frame");
     }
 }
