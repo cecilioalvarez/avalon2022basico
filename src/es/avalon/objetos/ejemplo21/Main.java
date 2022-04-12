@@ -8,8 +8,8 @@ public class Main {
         elementos.add(new Candado());
         elementos.add(new Taquilla(4));
 
-        for (int i = 0; i<elementos.size();i++){
-            elementos.get(i).abrir();
+        for (Accesible elemento : elementos) {
+            elemento.abrir();
         }
     }
 }
