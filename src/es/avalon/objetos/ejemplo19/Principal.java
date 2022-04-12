@@ -6,5 +6,8 @@ public class Principal {
         Persona p= new Persona("12345678a","pedro");
         System.out.println(p);
 
+        Persona p2= new Persona ("12345678a","pedro");
+        System.out.println(p.equals(p2));
+
     }
 }
