@@ -1,18 +1,16 @@
 package es.avalon.objetos.EjemploExcepciones;
 
-import java.io.File;
 import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
 
-        File fichero = new File("j:/prueba.txt");
-        try {
-            fichero.createNewFile();
-        } catch (IOException e) {
 
-            System.out.println(e.getMessage());
-            System.out.println(e.getCause());
+        try {
+            GestorFichero gestor = new GestorFichero();
+            gestor.crearFichero("j:/prueba.txt");
+        }catch (IOException e){
+            e.printStackTrace();
         }finally{
             System.out.println("El programa termina");
         }
