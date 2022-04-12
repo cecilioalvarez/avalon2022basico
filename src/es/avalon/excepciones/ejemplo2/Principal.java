@@ -1,0 +1,35 @@
+package es.avalon.excepciones.ejemplo2;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Principal {
+
+    public static void main(String[] args){
+        Date fecha=null;
+        SimpleDateFormat formateador=new SimpleDateFormat("dd/M/YY");
+        try {
+            fecha=formateador.parse("20/12/2022");
+            Calendar calendario= new GregorianCalendar();
+            calendario.setTime(fecha);
+            System.out.println(calendario.get(Calendar.DAY_OF_MONTH));
+            System.out.println(calendario.get(Calendar.WEEK_OF_MONTH));
+            System.out.println(calendario.get(Calendar.WEEK_OF_YEAR));
+            System.out.println(calendario.get(Calendar.MONTH));
+            System.out.println(calendario.get(Calendar.YEAR));
+
+
+        } catch (ParseException e) {
+            System.out.println("fecha incorrecta");
+            System.out.println(e.getMessage());
+        }
+
+
+    }
+
+
+    }
+
