@@ -18,6 +18,8 @@ public class Principal {
             fecha=formateador.parse("20/12/2022");
             Calendar calendario= new GregorianCalendar();
             calendario.setTime(fecha);
+
+
             System.out.println(calendario.get(Calendar.DAY_OF_MONTH));
             System.out.println(calendario.get(Calendar.WEEK_OF_MONTH));
             System.out.println(calendario.get(Calendar.WEEK_OF_YEAR));
