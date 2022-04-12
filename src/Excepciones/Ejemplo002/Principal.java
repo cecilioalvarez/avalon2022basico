@@ -6,8 +6,15 @@ import java.io.IOException;
 public class Principal {
     public static void main(String[] args) {//
         // throws IOException {
-       GestorFichero gf = new GestorFichero();
-       gf.CrearFichero("prueba.txt");
+
+        try {
+            GestorFichero gf = new GestorFichero();
+            gf.CrearFichero("y:/prueba.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("todo mal");
+        }
+        System.out.println("todo ok");
 
 
     }
