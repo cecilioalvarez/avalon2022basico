@@ -6,7 +6,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
-        File fichero = new File("prueba.txt");
+        File fichero = new File("j:/prueba.txt");
         try {
             fichero.createNewFile();
         } catch (IOException e) {
