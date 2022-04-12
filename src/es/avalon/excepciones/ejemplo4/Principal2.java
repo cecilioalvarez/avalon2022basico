@@ -24,6 +24,7 @@ public class Principal2 {
         System.out.println(calendario.get(Calendar.MONTH));
         System.out.println(calendario.get(Calendar.YEAR));
 
+
         System.out.println(formateador.format(fecha));
 
     }
