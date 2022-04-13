@@ -24,6 +24,13 @@ public class PrincipalMapas2 {
         System.out.println(mapaComplejo.get("4").getApellidos());
         System.out.println(mapaComplejo.get("5").getNombre());
 
+        System.out.println("..............");
+
+        Persona pb=mapaComplejo.get("3");
+        System.out.println(pb.getNombre());
+        System.out.println(pb.getApellidos());
+        System.out.println(pb.getDni());
+
 
     }
 }
