@@ -1,4 +1,4 @@
-package es.avalon.Excepciones.EjercicioFecha;
+package es.avalon.Colecciones.EjercicioFecha;
 
 
 import java.text.DateFormat;

@@ -1,4 +1,4 @@
-package es.avalon.Excepciones.Fecha4;
+package es.avalon.Colecciones.Fecha4;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

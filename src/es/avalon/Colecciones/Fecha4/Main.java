@@ -1,4 +1,4 @@
-package es.avalon.Excepciones.Fecha4;
+package es.avalon.Colecciones.Fecha4;
 
 import java.util.Calendar;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package es.avalon.Excepciones.Nacimiento;
+package es.avalon.Colecciones.Nacimiento;
 
 import java.util.Calendar;
 import java.util.Date;

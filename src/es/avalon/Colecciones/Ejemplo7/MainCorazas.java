@@ -1,4 +1,4 @@
-package es.avalon.Excepciones.Ejemplo7;
+package es.avalon.Colecciones.Ejemplo7;
 
 public class MainCorazas {
 

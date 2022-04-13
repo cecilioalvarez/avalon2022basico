@@ -1,4 +1,4 @@
-package es.avalon.Excepciones.EjercicioFecha;
+package es.avalon.Colecciones.EjercicioFecha;
 
 public class Main {
     public static void main(String[] args) {
