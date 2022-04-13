@@ -1,4 +1,4 @@
-package es.avalon.excepciones.ejemplo03Colecciones;
+package es.avalon.colecciones.ejemplo01Colecciones;
 
 import java.util.ArrayList;
 import java.util.List;
