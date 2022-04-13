@@ -24,10 +24,11 @@ public class Principal {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
+        double total=0;
         for (Factura f : facturas) {
 
-            System.out.println(f.getImporte());
+            total= total+ f.getImporte();
         }
+        System.out.println(total);
     }
 }
