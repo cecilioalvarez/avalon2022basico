@@ -1,7 +1,6 @@
-package es.avalon.excepciones.ejemplo7;
+package es.avalon.colecciones.ejemplo4;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Principal {

@@ -1,4 +1,4 @@
-package es.avalon.excepciones.ejemplo8;
+package es.avalon.colecciones.ejemplo5;
 
 public class Persona {
 

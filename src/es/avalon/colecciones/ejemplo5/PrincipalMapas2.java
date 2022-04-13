@@ -1,6 +1,7 @@
-package es.avalon.excepciones.ejemplo8;
+package es.avalon.colecciones.ejemplo5;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class PrincipalMapas2 {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class PrincipalMapas2 {
         Persona p4= new Persona("4","david","blanco");
         Persona p5= new Persona("5","oscar","gutierrez");
 
-        HashMap<String,Persona> mapaComplejo= new HashMap<String,Persona>();
+        Map<String,Persona> mapaComplejo= new HashMap<>();
         mapaComplejo.put(p1.getDni(),p1);
         mapaComplejo.put(p2.getDni(),p2);
         mapaComplejo.put(p3.getDni(),p3);
