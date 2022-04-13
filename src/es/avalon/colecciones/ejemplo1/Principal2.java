@@ -1,5 +1,5 @@
 
-package es.avalon.excepciones.ejemplo4;
+package es.avalon.colecciones.ejemplo1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
