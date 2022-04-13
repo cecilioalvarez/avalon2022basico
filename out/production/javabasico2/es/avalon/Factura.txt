@@ -1,0 +1,4 @@
+12, Angela, 200
+10, marcos, 500
+3, Raul, 700
+54, Pablo, 300
