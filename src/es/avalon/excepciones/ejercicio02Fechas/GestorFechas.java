@@ -1,4 +1,4 @@
-package es.avalon.excepciones.ejercicio01Fechas;
+package es.avalon.excepciones.ejercicio02Fechas;
 
 import java.text.DateFormat;
 import java.text.ParseException;
