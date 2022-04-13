@@ -1,6 +1,4 @@
-package es.avalon.Excepciones.Ejemplo2;
-
-import es.avalon.objetos.EjemploInterfaz2.Pelicula;
+package es.avalon.ManejoExcepciones.Ejemplo2;
 
 import java.text.DateFormat;
 import java.text.ParseException;
