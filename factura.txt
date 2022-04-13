@@ -1,0 +1,4 @@
+1,ordenador,200
+2,televisor,500
+3,movil,700
+4,auricular,100
