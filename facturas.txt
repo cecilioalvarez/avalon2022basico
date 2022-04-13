@@ -1,3 +1,4 @@
 1,ordenador,100
 2,tv,200
 3,micro,150
+4,equipo,250
