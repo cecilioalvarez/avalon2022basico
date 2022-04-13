@@ -1,4 +1,4 @@
-package es.avalon.excepciones.Ejemplo4;
+package es.avalon.excepciones.Ejemplo004;
 
 import java.text.DateFormat;
 import java.text.ParseException;

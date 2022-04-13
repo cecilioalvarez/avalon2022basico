@@ -1,4 +1,4 @@
-package es.avalon.excepciones.Ejemplo1;
+package es.avalon.excepciones.Ejemplo001;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package es.avalon.excepciones.Ejemplo6;
+package es.avalon.excepciones.Ejemplo006;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,7 +11,7 @@ public class Principal {
         SimpleDateFormat formateador=new SimpleDateFormat("dd/MM/YY");
         Date fecha=null;
         try {
-            fecha=formateador.parse("14/03/1980");
+            fecha=formateador.parse("14/03/1987");
             Persona p=new Persona("Jose",fecha);
             Calendar c1=new GregorianCalendar();
             c1.setTime(fecha);
