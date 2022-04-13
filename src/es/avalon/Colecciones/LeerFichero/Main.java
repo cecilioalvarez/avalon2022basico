@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        List<Factura> listaFactura= new ArrayList<Factura>();
+        List<Factura> listaFactura= new ArrayList<>();
 
         try {
             Scanner scanner = new Scanner((new File("factura.txt")));
@@ -21,9 +21,8 @@ public class Main {
                 listaFactura.add(factura);
 
 
-
             }
-            int total=0;
+            float total=0;
             for (Factura factura:listaFactura){
                 total+=factura.getPrecio();
             }
