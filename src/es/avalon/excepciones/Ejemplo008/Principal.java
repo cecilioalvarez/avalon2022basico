@@ -21,5 +21,15 @@ public class Principal {
         for(String cadena:lista){
             System.out.println(cadena);
         }
+        List<Integer>lista2=new ArrayList<>();
+        lista2.add(2);
+        lista2.add(2);
+        lista2.add(2);
+        lista2.add(2);
+        lista2.add(2);
+        for (Integer numeros:lista2){
+            System.out.println(numeros);
+        }
+
     }
 }
