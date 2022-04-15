@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
         ArrayList<Compra> compras = new ArrayList<>();
-        compras.add(new CompraConIva(1,"compra1",1));
-        compras.add(new CompraSinIVA(2,"compra1",1));
-        compras.add(new CompraIvaReducido(3,"compra1",1));
+        compras.add(new CompraConIva(1,"compra1",100));
+        compras.add(new CompraSinIVA(2,"compra1",100));
+        compras.add(new CompraIvaReducido(3,"compra1",100));
 
         double total = 0;
 
@@ -15,6 +15,7 @@ public class Principal {
             total = total + compras.get(i).getImporteConIVA();
 
         }
+        System.out.println(total);
 
     }
 }
