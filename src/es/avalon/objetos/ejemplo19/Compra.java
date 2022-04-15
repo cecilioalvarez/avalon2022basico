@@ -1,10 +1,12 @@
 package es.avalon.objetos.ejemplo19;
 
 public abstract class Compra {
-
     private double precio;
+
     private int id;
     private String concepto;
+
+    public abstract double getPrecioConIVA();
 
     public double getPrecio() {
         return precio;
@@ -29,11 +31,9 @@ public abstract class Compra {
     public void setConcepto(String concepto) {
         this.concepto = concepto;
     }
-
     public Compra(double precio, int id, String concepto) {
         this.precio = precio;
         this.id = id;
         this.concepto = concepto;
     }
-    public abstract double getPrecioConIVA();
 }
