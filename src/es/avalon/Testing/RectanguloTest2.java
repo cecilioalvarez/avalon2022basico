@@ -1,5 +1,6 @@
 package es.avalon.Testing;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -35,4 +36,11 @@ public class RectanguloTest2 {
             assertEquals(8,rectangulo1.perimetro());
             assertEquals(14,rectangulo2.perimetro());
         }
+
+        @AfterAll
+        public void tearDown(){
+            rectangulo1=null;
+            rectangulo2=null;
+        }
+
 }
