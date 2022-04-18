@@ -26,9 +26,14 @@ public class Rectangulo {
         this.lado2 = lado2;
     }
 
-    public double area(){
-        return getLado1()*getLado2();
+    public double area() {
+        if (lado1 < 0 || lado2 < 0) {
+
+            throw new RuntimeException("los lados no pueden ser negativos");
+        }
+        return lado1*lado2;
     }
+
 
     public double perimetro(){
         return getLado1()*2+getLado2()*2;
