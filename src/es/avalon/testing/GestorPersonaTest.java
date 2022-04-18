@@ -12,13 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GestorPersonaTest {
-    GestorPersonaTest gestor;
+    GestorPersona gestor;
 
     @BeforeEach
     public void setUp(){
         //arrange inicalizacion inicializo un gestor persona con una lista
         // act  actuar acabo de llamar al constructor y cargar el gestor con una lista de personas por defecto
-        gestor= new GestorPersonaTest(generaLista());
+        gestor= new GestorPersona(generaLista());
     }
     @Test
     @DisplayName("comprueba que la lista no esta vacia y cargada con datos")
