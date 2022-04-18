@@ -36,5 +36,4 @@ public class Rectangulo {
     public double perimetro() {
 
         return lado1*2 +lado2*2;
-    }
-}
+    }}
