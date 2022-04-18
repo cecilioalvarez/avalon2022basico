@@ -58,10 +58,19 @@ public class RectanguloTest {
     public void rectanguloCalculoPerimetroTest(){
 
         //Dentro de la funcion testing podemos realizar varias pruebas con distintos rectangulos
+
+        //TRIPLE A
+
+        //Arrange (Inicializar)
         Rectangulo r = new Rectangulo(2, 2);
         Rectangulo r2 = new Rectangulo(3, 2);
 
-        assertEquals(8, r.perimetro());
-        assertEquals(10, r2.perimetro());
+        //Actuar
+        double area = r.perimetro();
+        double area2 = r2.perimetro();
+
+        //Assert (Confirmar comprobar)
+        assertEquals(8, area);
+        assertEquals(10, area2);
     }
 }
