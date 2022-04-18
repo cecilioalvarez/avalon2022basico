@@ -1,4 +1,4 @@
-package es.avalon.testing;
+package es.avalon.testing.Ejemplo001;
 
 public class Rectangulo {
 
