@@ -1,5 +1,6 @@
-package es.avalon.testing;
+package es.avalon.testing.test;
 
+import es.avalon.testing.Persona;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,6 @@
-package es.avalon.testing;
+package es.avalon.testing.test;
 
+import es.avalon.testing.Rectangulo;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.testng.annotations.Test;

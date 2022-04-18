@@ -1,5 +1,6 @@
-package es.avalon.testing;
+package es.avalon.testing.test;
 
+import es.avalon.testing.Rectangulo;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
