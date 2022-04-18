@@ -25,8 +25,6 @@ public class RectanguloTest2 {
         @Test
         public void rectanguloCalculoAreaTest() {
 
-            rectangulo1= new Rectangulo(2,2);
-            rectangulo2= new Rectangulo(4,3);
             assertEquals(4,rectangulo1.area());
             assertEquals(12,rectangulo2.area());
         }
@@ -34,9 +32,7 @@ public class RectanguloTest2 {
         @Test
         public void rectanguloCalculoPerimetroTest() {
 
-            Rectangulo r= new Rectangulo(2,2);
-            Rectangulo r2= new Rectangulo(3,2);
-            assertEquals(8,r.perimetro());
-            assertEquals(10,r2.perimetro());
+            assertEquals(8,rectangulo1.perimetro());
+            assertEquals(14,rectangulo2.perimetro());
         }
 }
