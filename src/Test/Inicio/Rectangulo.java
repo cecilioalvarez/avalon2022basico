@@ -1,4 +1,4 @@
-package Test;
+package Test.Inicio;
 
 public class Rectangulo{
    private double lado1;
