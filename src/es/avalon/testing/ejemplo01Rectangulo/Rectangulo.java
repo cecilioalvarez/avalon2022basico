@@ -1,4 +1,4 @@
-package es.avalon.testing;
+package es.avalon.testing.ejemplo01Rectangulo;
 
 public class Rectangulo {
 
@@ -27,6 +27,12 @@ public class Rectangulo {
     }
 
     public double area(){
+
+        if(lado1<=0 || lado2<=0){
+            //Esta excepcion RunTimeException() no es obligatorio capturar
+            throw new RuntimeException("Los lados no pueden ser negativos");
+        }
+
         return lado1*lado2;
     }
 
