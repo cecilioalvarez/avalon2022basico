@@ -6,29 +6,32 @@ import java.util.List;
 
 public class GestorPersona {
 
-    private static List<Persona> lista= new ArrayList<>();
-    static {
+    // variable privada
+    private List<Persona> lista = new ArrayList<>();
 
-        lista.add(new Persona("1","pedro", LocalDate.of(2010,10,10)));
-        lista.add(new Persona("2","juan", LocalDate.of(2020,10,10)));
-        lista.add(new Persona("3","ana", LocalDate.of(2010,10,10)));
-        lista.add(new Persona("4","maria", LocalDate.of(1980,10,10)));
-        lista.add(new Persona("5","gema", LocalDate.of(2005,10,10)));
+    public GestorPersona(List<Persona> lista) {
 
+        this.lista = lista;
+    }
 
+    public List<Persona> getLista() {
+        return lista;
+    }
+
+    public void setLista(List<Persona> lista) {
+        this.lista = lista;
     }
 
     public Persona buscarPersonaPorDni(String dni) {
 
-            for (Persona p: lista) {
+        for (Persona p : lista) {
 
-                if (p.getDni().equals(dni)) {
+            if (p.getDni().equals(dni)) {
 
-                    return p;
-                }
+                return p;
             }
-            return null;
-
+        }
+        return null;
 
     }
 

@@ -1,5 +1,6 @@
-package es.avalon.testing;
+package es.avalon.testing.test;
 
+import es.avalon.testing.Rectangulo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,9 +47,17 @@ public class RectanguloTest {
     @Test
     public void rectanguloCalculoPerimetroTest() {
 
+        //arrange (inicializar)
         Rectangulo r= new Rectangulo(2,2);
         Rectangulo r2= new Rectangulo(3,2);
-        assertEquals(8,r.perimetro());
-        assertEquals(10,r2.perimetro());
+
+        // actuar
+        double area= r.perimetro();
+        double area2= r2.perimetro();
+
+
+        // confirmar comprobar
+        assertEquals(8,area);
+        assertEquals(10,area2);
     }
 }
