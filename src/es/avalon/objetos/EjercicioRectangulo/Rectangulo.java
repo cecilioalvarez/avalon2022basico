@@ -27,11 +27,11 @@ public class Rectangulo {
         this.lado2=lado2;
     }
 
-    double area(){
+    public double area(){
         return getLado1()*getLado2();
     }
 
-    double perimetro() {
+    public double perimetro() {
         return getLado1()*2+getLado2()*2;
     }
 
