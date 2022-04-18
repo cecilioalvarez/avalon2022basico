@@ -1,5 +1,7 @@
-package es.avalon.testing.Ejemplo001;
+package es.avalon.testing.Ejemplo001.Test;
 
+import es.avalon.testing.Ejemplo001.GestorPersona;
+import es.avalon.testing.Ejemplo001.Persona;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +36,7 @@ public class PersonaTest {
         Persona persona2=new Persona("1","Lucia",LocalDate.of(1981,9,9));
         assertEquals(persona2,Persona.esMayor(persona1,persona2));
         System.out.println(Persona.esMayor(persona1,persona2).getNombre());
+
 
     }
 

@@ -1,6 +1,7 @@
-package es.avalon.testing.Ejemplo001;
+package es.avalon.testing.Ejemplo001.Test;
 
 
+import es.avalon.testing.Ejemplo001.Rectangulo;
 import org.junit.jupiter.api.Test;
 
         import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -26,9 +27,11 @@ public class RectanguloTest {
 
     @Test
     public void rectanguloCalculoAreaLadoCero() {
+        //Arrange
         Rectangulo r = new Rectangulo(0, 0);
         Rectangulo r1 = new Rectangulo(0, 1);
         Rectangulo r2 = new Rectangulo(2, 0);
+        //assert-comprobar/confirmar
         assertEquals(0, r.area());
         assertEquals(0, r1.area());
         assertEquals(0, r2.area());

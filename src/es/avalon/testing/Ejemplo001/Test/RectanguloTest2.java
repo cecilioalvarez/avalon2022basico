@@ -1,5 +1,6 @@
-package es.avalon.testing.Ejemplo001;
+package es.avalon.testing.Ejemplo001.Test;
 
+import es.avalon.testing.Ejemplo001.Rectangulo;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
