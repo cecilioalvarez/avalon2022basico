@@ -33,6 +33,7 @@ public class Principal {
         int total = 0;
         System.out.println("Facturas de 2022");
         System.out.println("Id - Articulo - Importe");
+
         //Por ultimo, recorremos array de facturas y sumamos importes
         for(Factura factura:facturas){
             System.out.println(factura.getId() + " - " + factura.getArticulo() + " - " + factura.getImporte());
@@ -43,4 +44,5 @@ public class Principal {
 
 
     }
+
 }
