@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalaculadoraTest {
+public class CalculadoraTest {
 
     double numero1;
     double numero2;
