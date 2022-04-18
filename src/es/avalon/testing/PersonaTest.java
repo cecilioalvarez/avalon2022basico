@@ -1,40 +1,62 @@
 package es.avalon.testing;
 
 import org.junit.jupiter.api.DisplayName;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.testng.AssertJUnit.*;
 
 public class PersonaTest {
+
     @DisplayName("la persona es mayor de edad")
-    @Test
-    public void testMayorEdad(){
-        Persona p1= new Persona("123","edwin", LocalDate.of(1998,1,1));
+    @org.junit.jupiter.api.Test
+    public void testMayorEdad() {
+
+        Persona p1 =
+                new Persona("123", "gomez", LocalDate.of(1970, 10, 10));
         assertTrue(p1.esMayorDeEdad());
 
-        Persona p2= new Persona("123","edwin", LocalDate.of(1998,1,1));
-        assertTrue(p1.esMayorDeEdad());
+        Persona p2 =
+                new Persona("123", "gomez", LocalDate.of(2020, 10, 10));
+        assertFalse(p2.esMayorDeEdad());
 
     }
+
+//    @Test
+//    public void testGestorPersonaBusqueda() {
+//
+//        GestorPersona gestor = new GestorPersona();
+//        Persona p = gestor.buscarPersonaPorDni("1");
+//        assertNotNull(p);
+//        Persona p2 = gestor.buscarPersonaPorDni("10");
+//        assertNull(p2);
+//
+//    }
+
+
     @Test
-    public void testGestorPersonaBusqueda(){
-        GestorPersona gestor= new GestorPersona();
-        Persona p= gestor.buscarPersonaPorDni("i");
-        assertNotNull(p);
-        Persona p2 =gestor.buscarPersonaPorDni("10");
-        assertNull(p2);
+    public void testComparacionPersonas() {
+
+        Persona p1 = new Persona("1", "pedro", LocalDate.of(2000, 10, 10));
+        Persona p2 = new Persona("2º", "ana", LocalDate.of(2010, 10, 10));
+        Persona pNueva= new Persona("1","antonio",LocalDate.of(1980,10,1));
+        //compara la igualdad entre dos objetos
+        assertEquals(p1,Persona.esMayor(p1,p2));
+        // compara si el objeto es el mismo en memoria
+        assertSame(p1,Persona.esMayor(p1,p2));
+
+
+        assertEquals(pNueva,Persona.esMayor(p1,pNueva));
+        // compara si el objeto es el mismo en memoria
+        assertEquals(p1,pNueva);
+        assertSame(p1,pNueva);
+
+
 
     }
-    @Test
-    public  void testComparacionPersonas (){
-        Persona p1 = new Persona("1","edwin",LocalDate.of(2000,10,10));
-        Persona p2 = new Persona("2","pedro",LocalDate.of(2010,10,10));
-        Persona pNueva = new Persona("3","stiven",LocalDate.of(1980,10,10));
-
-       // assertEquals(p1,Persona.esMayor(p1,p2));
-    }
-
-
 }
