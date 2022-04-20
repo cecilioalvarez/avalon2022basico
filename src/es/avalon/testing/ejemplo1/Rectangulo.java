@@ -1,4 +1,4 @@
-package es.avalon.testing;
+package es.avalon.testing.ejemplo1;
 
 public class Rectangulo {
     private double lado1;

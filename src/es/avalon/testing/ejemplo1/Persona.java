@@ -1,4 +1,4 @@
-package es.avalon.testing;
+package es.avalon.testing.ejemplo1;
 
 import java.time.LocalDate;
 import java.time.Period;
