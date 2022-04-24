@@ -1,6 +1,6 @@
-package es.avalon.APIsCore.ejemplo2;
+package es.avalon.APIsCore.ejemplo1;
 
-public class Main {
+public class Main2 {
     //Usos de la los tipos Double(clase coraza) y tipo basico double
     public static void main(String[] args) {
         String numero1 = "20.20";
