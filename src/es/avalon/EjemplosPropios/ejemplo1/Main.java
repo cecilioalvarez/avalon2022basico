@@ -1,4 +1,4 @@
-package es.avalon.EjemplosPropios;
+package es.avalon.EjemplosPropios.ejemplo1;
 
 import java.io.File;
 import java.io.FileWriter;

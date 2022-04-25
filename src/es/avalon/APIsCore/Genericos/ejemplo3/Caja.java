@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Caja<T extends Producto>  {
-    private List<T> lista = new ArrayList();
+    private List<T> lista = new ArrayList<T>();
     private int tope;
 
     public Caja(int tope) {

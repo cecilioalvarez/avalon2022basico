@@ -1,4 +1,4 @@
-package es.avalon.EjemplosPropios;
+package es.avalon.EjemplosPropios.ejemplo1;
 
 public class Casa extends DBObject implements Imprimible{
     private int NumeroHabitaciones;

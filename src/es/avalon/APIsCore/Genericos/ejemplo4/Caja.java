@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Caja <T> implements Iterable<T>{
 
-    protected List<T> lista = new ArrayList();
+    protected List<T> lista = new ArrayList<T>();
     protected int tope;
 
     public void add(T elemento) {
