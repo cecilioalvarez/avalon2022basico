@@ -17,8 +17,8 @@ public class CocheTest {
         //150*0.73=109.5
         //rellena el objeto mock con una simulacion de valor
         when(m.getPotencia()).thenReturn(109.5);
-
-        Coche c=new Coche("Audi",new Motor(150));
+        //construyo el coche c con el  motor mock m
+        Coche c=new Coche("Audi",m);
         assertEquals(100,c.getPotencia(),1);
     }
 }
