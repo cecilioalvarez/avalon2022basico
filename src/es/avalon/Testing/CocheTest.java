@@ -27,7 +27,7 @@ public class CocheTest {
 
         //genero simulacion
         Motor m=mock(Motor.class);
-        when(m.gastoGasolina().thenReturn(219.0));
+        when(m.gastoGasolina());
         Coche c=new Coche("Audi", m);
 
         assertEquals(197.1,c.getGastogasolina(),1);
