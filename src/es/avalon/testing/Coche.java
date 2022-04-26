@@ -30,4 +30,9 @@ public class Coche {
         return motor.getPotencia()-10;
     }
 
+    public double getGastoGasolina() {
+
+        return motor.gastoGasolina();
+    }
+
 }

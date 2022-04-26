@@ -15,10 +15,17 @@ public class Motor {
     // le acabo de implementar de forma incorrecta
     public double getPotencia() {
 
-       return  kiloWatios*0.73*2;
+       return  kiloWatios*0.73;
+    }
+
+    public double gastoGasolina() {
+
+        return getPotencia()* 2;
     }
 
     public Motor(int kiloWatios) {
         this.kiloWatios = kiloWatios;
     }
+
+
 }
