@@ -19,8 +19,9 @@ public class LectorFichero {
         List<String> lineas = new ArrayList<>();
 
         try (Scanner scanner = new Scanner(fichero)){
-            while (scanner.hasNextLine()) {
-                lineas.add(scanner.nextLine());
+            if (scanner.hasNextLine()){
+                if (!scanner.nextLine().contains("empresa"))
+                    return lineas;
             }
 
         } catch (FileNotFoundException e) {
