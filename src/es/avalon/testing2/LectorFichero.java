@@ -14,16 +14,16 @@ public class LectorFichero {
         this.fichero = fichero;
     }
 
-    public List<String> leerLineas() {
+    public List<String> leerLineas() throws FileNotFoundException {
         List<String> lineas = new ArrayList<>();
-        Scanner scanner = null;
-        try {
-            scanner = new Scanner(fichero);
+
+        try ( Scanner scanner = new Scanner(fichero)){
+
             while (scanner.hasNextLine()) {
                 lineas.add(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+         throw e;
         }
 
         return lineas;
