@@ -20,7 +20,6 @@ public class LectorFichero {
 
         try (Scanner scanner = new Scanner(fichero)){
             while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
                 lineas.add(scanner.nextLine());
             }
 
