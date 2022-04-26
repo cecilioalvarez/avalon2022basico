@@ -25,5 +25,8 @@ public class CocheTest {
 
         assertEquals(100,c.getPotencia(),1);
 
+
+
+
     }
 }
