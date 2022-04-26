@@ -15,4 +15,5 @@ public class Empresa {
     public Empresa(String nombre) {
         this.nombre = nombre;
     }
+
 }
