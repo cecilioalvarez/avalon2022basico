@@ -27,4 +27,5 @@ public class Coche {
     public double getPotencia(){
         return motor.getPotencia()-10;
     }
+
 }
