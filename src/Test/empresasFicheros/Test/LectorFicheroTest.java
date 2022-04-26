@@ -18,7 +18,7 @@ class LectorFicheroTest {
     void leerlineasTest() {
         LectorFichero lc = new LectorFichero(new File("gastos.txt"));
         try {
-            List<String> lineas = lc.leerlineas();
+            List<String> lineas = lc.leerLineas();
             //assertEquals(3,lineas.size());
             assertTrue(lineas.size()>=3);
             //assertTrue(lineas.contains("empresa"));
@@ -32,7 +32,7 @@ class LectorFicheroTest {
     void leerlineasFucheroVacio() {
         LectorFichero lc = new LectorFichero(new File("gastos1.txt"));
         try {
-            List<String> lineas = lc.leerlineas();
+            List<String> lineas = lc.leerLineas();
             //assertEquals(3,lineas.size());
             assertTrue(lineas.size()==0);
         } catch (FileNotFoundException e) {
@@ -44,7 +44,7 @@ class LectorFicheroTest {
     public void ficheroNoExiste(){
         LectorFichero lc = new LectorFichero(new File("noExiste.txt"));
         Assertions.assertThrows(FileNotFoundException.class, ()->{
-            lc.leerlineas();
+            lc.leerLineas();
         });
     }
 

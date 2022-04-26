@@ -7,26 +7,30 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LectorFichero {
+
     private File fichero;
 
     public LectorFichero(File fichero) {
         this.fichero = fichero;
     }
 
-    public List<String> leerlineas() throws  FileNotFoundException{
-        List<String> valores = new ArrayList<String>();
-        try ( Scanner sc= new Scanner(fichero);){
-            if(sc.hasNextLine()){
-                if(!(sc.nextLine().contains("empresa"))) return valores;
+    public List<String> leerLineas() throws FileNotFoundException {
+        List<String> lineas = new ArrayList<>();
+
+        try ( Scanner scanner = new Scanner(fichero)){
+
+            if (scanner.hasNextLine() ) {
+                if (!scanner.nextLine().contains("empresa")) return lineas;
             }
-            while (sc.hasNextLine()){
-                String texto =sc.nextLine();
-                System.out.println(texto);
-                valores.add(texto);
+
+            while (scanner.hasNextLine()) {
+                lineas.add(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
             throw e;
         }
-        return valores;
+
+        return lineas;
     }
 }
+
