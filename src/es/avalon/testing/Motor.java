@@ -12,9 +12,10 @@ public class Motor {
         this.kiloWatios = kiloWatios;
     }
 
+    // le acabo de implementar de forma incorrecta
     public double getPotencia() {
 
-       return  kiloWatios*0.73 *2;
+       return  kiloWatios*0.73*2;
     }
 
     public Motor(int kiloWatios) {
