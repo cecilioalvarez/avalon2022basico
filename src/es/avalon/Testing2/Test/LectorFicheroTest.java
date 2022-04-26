@@ -16,18 +16,13 @@ public class LectorFicheroTest {
 
     @Test
     @DisplayName("Leer lineas de fichero")
-    public void leerLineasTest() {
+    public void leerLineasTest() throws FileNotFoundException {
         //Arrange, preparar el codigo
         LectorFichero lector = new LectorFichero(new File("gastos.txt"));
         //ACT, actuacion del test
-        try {
             List<String> lineas = lector.leerlineas();
             assertTrue(lineas.size()>=1);
             assertTrue(lineas.get(0).contains("empresa"));
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
