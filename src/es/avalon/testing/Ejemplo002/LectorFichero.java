@@ -13,17 +13,19 @@ public class LectorFichero {
 
     private File fichero;
 
-    public List<String> leerLineas(){
+    public List<String> leerLineas() throws FileNotFoundException {
         List<String>lineas=new ArrayList<>();
-        Scanner scanner = null;
-        try {
-            scanner = new Scanner(new File("gastos.txt"));
+        //Metodo para leer linea a linea un fichero.
+        //Intenta leer un fichero. Si puede lo lee linea a lineay añade cada linea a la lista lineas.
+        //Sino puede atrapa la excepcion y la lanza
+        try (Scanner scanner = new Scanner(fichero)){
+
             while (scanner.hasNextLine()) {
                 lineas.add(scanner.nextLine());
 
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            throw e;
         }
 
         return lineas;
