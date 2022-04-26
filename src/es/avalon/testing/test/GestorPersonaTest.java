@@ -33,18 +33,6 @@ public class GestorPersonaTest {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     private List<Persona> generaLista() {
 
         List<Persona> lista = new ArrayList<>();
