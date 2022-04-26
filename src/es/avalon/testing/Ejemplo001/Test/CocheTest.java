@@ -5,12 +5,19 @@ import es.avalon.testing.Ejemplo001.Motor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class CocheTest {
 
     @Test
 
     public void CochePotenciaTest(){
+        Motor m=mock(Motor.class);
+        //150*0.73=109.5
+        //rellena el objeto mock con una simulacion de valor
+        when(m.getPotencia()).thenReturn(109.5);
+
         Coche c=new Coche("Audi",new Motor(150));
         assertEquals(100,c.getPotencia(),1);
     }
