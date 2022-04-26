@@ -34,4 +34,9 @@ public class Coche {
         //Le reducimos algo de potencia al montarlo al coche (Aunque no sabemos si es el calculo correcto)
         return motor.getPotencia()-10;
     }
+
+    public double getGastoGasolina(){
+
+        return motor.gastoGasolina();
+    }
 }

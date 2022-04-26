@@ -16,7 +16,12 @@ public class Motor {
         return kiloWatios*0.73;
     }
 
+    public double gastoGasolina() {
+        return getPotencia() * 2;
+    }
+
     public Motor(int kiloWatios) {
         this.kiloWatios = kiloWatios;
     }
+
 }
