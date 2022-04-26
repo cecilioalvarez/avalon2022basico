@@ -19,6 +19,10 @@ public class LectorFichero {
 
         try ( Scanner scanner = new Scanner(fichero)){
 
+            if (scanner.hasNextLine() ) {
+                if (!scanner.nextLine().contains("empresa")) return lineas;
+            }
+
             while (scanner.hasNextLine()) {
                 lineas.add(scanner.nextLine());
             }
