@@ -5,6 +5,7 @@ import java.time.Period;
 import java.util.Objects;
 
 public class Persona {
+
     private String dni;
     private String nombre;
     private LocalDate fechaNacimiento;
