@@ -13,7 +13,7 @@ public class Motor {
     }
 
     public double getPotencia(){
-        return kilowatios*0.73;
+        return kilowatios*0.73*2;
     }
 
     public Motor(int kilowatios) {
