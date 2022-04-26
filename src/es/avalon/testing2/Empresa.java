@@ -2,6 +2,7 @@ package es.avalon.testing2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Empresa {
     private String nombre;
@@ -21,4 +22,16 @@ public class Empresa {
         this.nombre = nombre;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Empresa)) return false;
+        Empresa empresa = (Empresa) o;
+        return Objects.equals(nombre, empresa.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
+    }
 }

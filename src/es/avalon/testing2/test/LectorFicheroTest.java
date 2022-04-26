@@ -23,8 +23,9 @@ public class LectorFicheroTest {
         List<String> lineas = lector.leerLineas();
         //verificar Assert
         assertTrue(lineas.size() >= 1);
-        assertTrue(lineas.get(0).contains("empresa"));
-
+        assertTrue(lineas.get(0).contains("empresaa"));
+        assertTrue(lineas.get(1).contains("empresab"));
+        assertTrue(lineas.get(2).contains("empresac"));
 
     }
 
