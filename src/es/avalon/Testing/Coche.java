@@ -29,4 +29,9 @@ public class Coche {
         // no tengo ni diea de si es asi en la realidad
         return motor.getPotencia()-10;
     }
+
+    public double getGastogasolina(){
+
+        return motor.gastoGasolina();
+    }
 }
