@@ -1,0 +1,15 @@
+package es.avalon.Testing;
+
+import org.junit.jupiter.api.Test;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class motorTest {
+
+    @Test
+    public void testMotor(){
+        Motor m = new Motor(150);
+        assertEquals(110,m.getPotencia(),1);
+    }
+}
