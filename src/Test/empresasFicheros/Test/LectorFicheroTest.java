@@ -20,8 +20,8 @@ class LectorFicheroTest {
         try {
             List<String> lineas = lc.leerLineas();
             //assertEquals(3,lineas.size());
-            assertTrue(lineas.size()>=3);
-            //assertTrue(lineas.contains("empresa"));
+            assertTrue(lineas.size()>=1);
+            assertTrue(lineas.get(0).contains("empresa"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

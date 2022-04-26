@@ -2,6 +2,7 @@ package Test.empresasFicheros;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Empresa {
     private String nombre;
@@ -17,5 +18,22 @@ public class Empresa {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    public void addGasto(Gasto gasto){
+        gastos.add(gasto);
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Empresa)) return false;
+        Empresa empresa = (Empresa) o;
+        return Objects.equals(getNombre(), empresa.getNombre());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getNombre());
     }
 }
