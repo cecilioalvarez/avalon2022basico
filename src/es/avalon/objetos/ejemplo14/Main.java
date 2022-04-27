@@ -2,7 +2,32 @@ package es.avalon.objetos.ejemplo14;
 
 public class Main {
     public static void main(String[] args) {
-        Nas nas1 = new Nas();
+        Nas nas1 = new Nas() {
+            @Override
+            public void setIdNas(String s) {
+
+            }
+
+            @Override
+            public void addDisco(DiscoDuro disco1) {
+
+            }
+
+            @Override
+            public boolean getIdNas() {
+                return false;
+            }
+
+            @Override
+            public void recorrerNas() {
+
+            }
+
+            @Override
+            public boolean GetCapacidadTotal() {
+                return false;
+            }
+        };
         nas1.setIdNas("Nas 1");
         nas1.addDisco(new DiscoDuro("Disco1", 1));
         nas1.addDisco(new DiscoDuro("Disco2", 3));

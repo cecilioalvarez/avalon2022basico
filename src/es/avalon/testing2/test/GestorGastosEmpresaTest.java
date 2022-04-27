@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -27,10 +28,12 @@ class GestorGastoEmpresaTest {
         //geera dependencias entre los diferentes Test
         LectorFichero lector=mock(LectorFichero.class);
         List<String> lineas= new ArrayList<>();
-        lineas.add("empresaa, 100,200,400,600");
-        lineas.add("empresab, 50,100,200,25");
+        when(lineas.get(0)).thenReturn("empresaa, 100,200,400,600");
+        when(lineas.get(1)).thenReturn("empresab, 50,100,200,25");
 
         when(lector.leerLineas()).thenReturn(lineas);
+
+        List<Gasto> gastos = Arrays.asList(new Gasto(100),new Gasto(200),new Gasto(400),new Gasto(600));
 
         GestorGastoEmpresa gestor = new GestorGastoEmpresa(lector);
         List<Empresa> listaEmpresas = gestor.getEmpresasConGastos();
