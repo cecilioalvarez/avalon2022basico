@@ -35,7 +35,9 @@ public class AulaTest {
         //arrange
         Aula aula= new Aula(1);
         Alumno a1= new Alumno("pedro");
+        Alumno a2 = new Alumno ("Antonio");
         aula.addAlumno(a1);
+        aula.addAlumno(a2);
         assertEquals (1,aula.getAlumnos().size());
 
 

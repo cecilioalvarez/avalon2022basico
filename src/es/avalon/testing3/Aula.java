@@ -1,7 +1,20 @@
 package es.avalon.testing3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aula {
     private int numero;
+
+    private List<Alumno> alumnos = new ArrayList<>();
+
+    public List<Alumno> getAlumnos() {
+        return alumnos;
+    }
+
+    public void setAlumnos(List<Alumno> alumnos) {
+        this.alumnos = alumnos;
+    }
 
     public Aula(int numero) {
         this.numero = numero;
@@ -19,7 +32,11 @@ public class Aula {
     }
 
     public double notaMedia() {
+        double total=0;
+        for (Alumno a : alumnos) {
 
-        return 0;
+            total+= a.notaMedia();
+        }
+        return total/alumnos.size();
     }
 }
