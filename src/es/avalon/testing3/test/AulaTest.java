@@ -20,13 +20,14 @@ public class AulaTest {
         Alumno a1= mock(Alumno.class);
         when(a1.notaMedia()).thenReturn(5.1);
         Alumno a2= mock(Alumno.class);
-        when(a1.notaMedia()).thenReturn(7.3);
+        when(a2.notaMedia()).thenReturn(7.3);
         Alumno a3= mock(Alumno.class);
-        when(a1.notaMedia()).thenReturn(6.2);
+        when(a3.notaMedia()).thenReturn(6.2);
 
         aula.addAlumno(a1);
         aula.addAlumno(a2);
         aula.addAlumno(a3);
+        assertEquals(6.2,aula.notaMedia(),0.1);
 
     }
 

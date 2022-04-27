@@ -30,4 +30,13 @@ public class Aula {
     public void addAlumno(Alumno a1) {
         alumnos.add(a1);
     }
+
+    public double notaMedia() {
+       double total=0;
+       for (Alumno a : alumnos) {
+
+           total+= a.notaMedia();
+       }
+        return total/alumnos.size();
+    }
 }
