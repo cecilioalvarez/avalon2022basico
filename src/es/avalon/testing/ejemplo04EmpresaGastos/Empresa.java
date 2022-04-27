@@ -25,16 +25,26 @@ public class Empresa {
         this.nombre = nombre;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Empresa)) return false;
         Empresa empresa = (Empresa) o;
-        return Objects.equals(nombre, empresa.nombre) && Objects.equals(gastos, empresa.gastos);
+        return Objects.equals(nombre, empresa.nombre);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nombre, gastos);
+        return Objects.hash(nombre);
+    }
+
+
+    public List<Gasto> getGastos() {
+        return gastos;
+    }
+
+    public void setGastos(List<Gasto> gastos) {
+        this.gastos = gastos;
     }
 }
