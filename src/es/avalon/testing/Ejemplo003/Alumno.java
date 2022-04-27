@@ -44,16 +44,18 @@ public class Alumno {
         }
         return total;
     }
-    public double notaMedia(){
-        double sumaNotas=0;
+
+    public double notaMedia() {
+        double sumaNotas = 0;
         for (Nota nota : notas) {
             sumaNotas += nota.getValor();
 
         }
-        return sumaNotas/notas.size();
+        return sumaNotas / notas.size();
     }
-    public double notaMayor(){
-        double mayor=0;
+
+    public double notaMayor() {
+        double mayor = 0;
 
         for (Nota nota : notas) {
             if (mayor < nota.getValor()) {
@@ -64,13 +66,14 @@ public class Alumno {
         }
         return mayor;
     }
+
     public Nota mayorNota() {//devuelve un objeto Nota. Mejor solucion
 
-        Nota inicial= notas.get(0);
-        for (Nota nota: notas) {
+        Nota inicial = notas.get(0);
+        for (Nota nota : notas) {
 
-            if (inicial.getValor()<nota.getValor()) {
-                inicial=nota;
+            if (inicial.getValor() < nota.getValor()) {
+                inicial = nota;
             }
         }
         return inicial;
