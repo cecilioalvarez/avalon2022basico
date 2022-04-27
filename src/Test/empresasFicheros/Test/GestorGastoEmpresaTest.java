@@ -20,22 +20,34 @@ class GestorGastoEmpresaTest {
 
     @Test
     void getEmpresaConGastos() throws FileNotFoundException {
-        LectorFichero lector = mock(LectorFichero.class);
+        /********Arrange*******/
+
         List <String> lineas = new ArrayList<>();
         lineas.add("empresaa, 100.0,200,400,600");
         lineas.add("empresab, 50,100,200,25");
+
+        LectorFichero lector = mock(LectorFichero.class);
         when(lector.leerLineas()).thenReturn(lineas);
         GestorGastoEmpresa gestor = new GestorGastoEmpresa(lector);
-        //GestorGastoEmpresa gestor = new GestorGastoEmpresa(new LectorFichero(new File("gastos.txt")));
-        List<Empresa> listaEmpresas = gestor.getEmpresaConGastos();
-        assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
-        assertTrue(listaEmpresas.contains(new Empresa("empresab")));
-        //assertTrue(listaEmpresas.contains(new Empresa("empresac")));
-        Empresa empresa=listaEmpresas.get(0);
-        List<Gasto> gastos = Arrays.asList(new Gasto(100.0),new Gasto(200.0),new Gasto(400.0),new Gasto(600.0));
 
-        assertTrue(empresa.getGastos().contains(new Gasto(100.0)));
-        assertTrue(empresa.getGastos().contains(new Gasto(200.0)));
-        assertArrayEquals(empresa.getGastos().toArray(new Gasto[0]), gastos.toArray());
+        List<Gasto> gastos = Arrays.asList(new Gasto(100.0),new Gasto(200.0),new Gasto(400.0),new Gasto(600.0));
+        List<Gasto> gastos1 = Arrays.asList(new Gasto(50.0),new Gasto(100.0),new Gasto(200.0),new Gasto(25.0));
+
+
+
+
+        /******ACT (actuar)*********/
+        List<Empresa> listaEmpresas = gestor.getEmpresaConGastos();
+        Empresa empresaA=listaEmpresas.get(0);
+        Empresa empresaB=listaEmpresas.get(1);
+
+        //GestorGastoEmpresa gestor = new GestorGastoEmpresa(new LectorFichero(new File("gastos.txt")));
+       /********ASSERT (Validar, confirmar)******/
+        assertTrue(listaEmpresas.contains(empresaA));
+        assertTrue(listaEmpresas.contains(empresaB));
+        assertTrue(empresaA.getGastos().contains(new Gasto(100.0)));
+        assertTrue(empresaA.getGastos().contains(new Gasto(200.0)));
+        assertArrayEquals(empresaA.getGastos().toArray(), gastos.toArray());
+        assertArrayEquals(empresaB.getGastos().toArray(), gastos1.toArray());
     }
 }
