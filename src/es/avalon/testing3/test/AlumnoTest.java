@@ -16,7 +16,6 @@ public class AlumnoTest {
         Alumno alumno= new Alumno("pedro");
         //act actuar ,ejecutar
         alumno.addNota(new Nota("matetaticas",7));
-
         //assert o confirmacion
         assertEquals(1,alumno.getNotas().size());
 

@@ -31,4 +31,15 @@ public class Alumno {
     public void setNotas(List<Nota> notas) {
         this.notas = notas;
     }
+    public int notasAprobadas() {
+        int total=0;
+        for (Nota n : notas) {
+
+            if (n.esAprobado()) {
+
+                total++;
+            }
+        }
+        return total;
+    }
 }
