@@ -1,0 +1,45 @@
+package es.avalon.testing3;
+
+import java.util.Objects;
+
+public class Nota {
+    private String asignatura;
+    private double valor;
+
+    public String getAsignatura() {
+        return asignatura;
+    }
+
+    public void setAsignatura(String asignatura) {
+        this.asignatura = asignatura;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public Nota(String asignatura, double valor) {
+        this.asignatura = asignatura;
+        this.valor = valor;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Nota nota = (Nota) o;
+        return Double.compare(nota.valor, valor) == 0 && asignatura.equals(nota.asignatura);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(asignatura, valor);
+    }
+    public boolean esAporbado(){
+        return valor>=5;
+    }
+}
