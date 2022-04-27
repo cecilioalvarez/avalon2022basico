@@ -17,4 +17,9 @@ public class Aula {
 
     public void addAlumno(Alumno a1) {
     }
+
+    public double notaMedia() {
+
+        return 0;
+    }
 }
