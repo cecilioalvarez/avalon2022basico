@@ -38,7 +38,7 @@ public class AlumnoTest {
         alumno.addNota(new Nota("matematicas",7));
         alumno.addNota(new Nota("matematicas",3));
         alumno.addNota(new Nota("matematicas",5));
-        //assert o confirmacion
+        System.out.println(alumno.mayorNota().getAsignatura());
         assertEquals(new Nota("matematicas",7),alumno.mayorNota());
 
     }
