@@ -32,6 +32,14 @@ public class Empresa {
         return Objects.equals(getNombre(), empresa.getNombre());
     }
 
+    public List<Gasto> getGastos() {
+        return gastos;
+    }
+
+    public void setGastos(List<Gasto> gastos) {
+        this.gastos = gastos;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(getNombre());
