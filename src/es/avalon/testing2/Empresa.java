@@ -35,5 +35,13 @@ public class Empresa {
     public int hashCode() {
         return Objects.hash(nombre);
     }
+
+    public List<Gasto> getGastos() {
+        return gastos;
+    }
+
+    public void setGastos(List<Gasto> gastos) {
+        this.gastos = gastos;
+    }
 }
 
