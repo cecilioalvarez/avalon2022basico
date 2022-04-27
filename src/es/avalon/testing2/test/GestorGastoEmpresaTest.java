@@ -33,23 +33,27 @@ public class GestorGastoEmpresaTest {
         lineas.add("empresaa, 100,200,400,600");
         lineas.add("empresab, 50,100,200,25");
 
-        List<Gasto> gastos= Arrays.asList(new Gasto(100),new Gasto(200),new Gasto(400),new Gasto(600));
-
+        List<Gasto> gastos1= Arrays.asList(new Gasto(100),new Gasto(200),new Gasto(400),new Gasto(600));
+        List<Gasto> gastos2= Arrays.asList(new Gasto(50),new Gasto(100),new Gasto(200),new Gasto(25));
         when(lector.leerLineas()).thenReturn(lineas);
 
         GestorGastoEmpresa gestor = new GestorGastoEmpresa(lector);
         List<Empresa> listaEmpresas = gestor.getEmpresasConGastos();
 
-        assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
-        assertTrue(listaEmpresas.contains(new Empresa("empresab")));
+        /*assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
+        assertTrue(listaEmpresas.contains(new Empresa("empresab")));*/
         Empresa empresaA =listaEmpresas.get(0);
+        Empresa empresaB =listaEmpresas.get(1);
+
       /*  assertTrue(empresaA.getGastos().contains(new Gasto(100)));
         assertTrue(empresaA.getGastos().contains(new Gasto(200)));
         assertTrue(empresaA.getGastos().contains(new Gasto(400)));
         assertTrue(empresaA.getGastos().contains(new Gasto(600)));*/
+        assertTrue(listaEmpresas.contains(empresaA));
+        assertTrue(listaEmpresas.contains(empresaA));
 
-        assertArrayEquals(empresaA.getGastos().toArray(),gastos.toArray());
-
+        assertArrayEquals(empresaA.getGastos().toArray(),gastos1.toArray());
+        assertArrayEquals(empresaB.getGastos().toArray(),gastos2.toArray());
 
     }
 
