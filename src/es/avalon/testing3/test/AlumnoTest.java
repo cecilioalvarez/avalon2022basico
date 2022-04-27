@@ -24,6 +24,19 @@ public class AlumnoTest {
     }
 
     @Test
+    @DisplayName("nota media del alumno")
+    public  void notaMediaTest(){
+
+        Alumno alumno =new Alumno("pedro");
+
+        alumno.addNota(new Nota("matematicas", 7));
+        alumno.addNota(new Nota("matematicas", 3));
+        alumno.addNota(new Nota("matematicas", 5));
+
+        assertEquals(5,alumno.notaMedia(),0.1);
+    }
+
+    @Test
     @DisplayName("Numero de aprobados test")
     public  void numeroAprobadosTest(){
         Alumno alumno =new Alumno("pedro");

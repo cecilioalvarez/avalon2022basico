@@ -38,4 +38,13 @@ public class Alumno {
         }
         return total;
     }
+
+
+    public double notaMedia(){
+      double total=0;
+        for (Nota n: notas){
+            total=total+n.getValor();
+        }
+        return total/notas.size();
+    }
 }
