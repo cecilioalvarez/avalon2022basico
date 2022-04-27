@@ -49,11 +49,24 @@ public class Alumno {
     }
 
     public double notaMedia(){
-        int total = 0;
+        double total = 0;
         for(Nota n : notas) {
             total+= n.getValor();
         }
         return  total/notas.size();
+    }
+
+    public Nota mayorNota() {
+
+        Nota inicial= notas.get(0);
+        for (Nota nota: notas) {
+
+            if (inicial.getValor()<nota.getValor()) {
+                inicial=nota;
+            }
+        }
+        return inicial;
+
     }
 
 
