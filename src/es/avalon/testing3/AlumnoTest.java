@@ -37,7 +37,7 @@ public class AlumnoTest {
         notas.add(nota3);
         alumno.setNotas(notas);
         //assert
-        assertEquals(1, alumno.getNotas().size());
+        assertEquals(3, alumno.getNotas().size());
     }
     @Test
     @DisplayName("Vamos a calcular la media de notas")
@@ -55,5 +55,23 @@ public class AlumnoTest {
 
         //assert
         assertEquals(5, alumno.notaMedia(), 0.1);
+    }
+
+    @Test
+    @DisplayName("Vamos a calcular la nota mas alta")
+
+    public void notaMasAlta() {
+
+        //arrange
+        Alumno alumno = new Alumno("Pedro");
+
+        //act
+
+        alumno.addNota(new Nota("Matematicas", 7));
+        alumno.addNota(new Nota("Lengua", 5));
+        alumno.addNota(new Nota("Historia", 3));
+
+        //assert
+        assertEquals(7, alumno.notaMayor());
     }
 }

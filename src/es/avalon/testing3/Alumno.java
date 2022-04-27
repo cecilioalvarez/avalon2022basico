@@ -50,4 +50,16 @@ public class Alumno {
         }
         return total/notas.size();
     }
+
+    public double notaMayor() {
+        double mayor = 0;
+        for (Nota n : notas){
+            if (n.getValor() > mayor){
+                mayor = n.getValor();
+            }else {
+                return mayor;
+            }
+        }
+        return mayor;
+    }
 }
