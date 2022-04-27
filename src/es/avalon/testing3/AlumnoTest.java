@@ -76,6 +76,8 @@ public class AlumnoTest {
         alumno.addNota(new Nota("Historia", 3));
 
         //assert
-        assertEquals(7, alumno.notaMayor());
+
+        assertEquals(new Nota("matematicas", 7),alumno.mayorNota());
+        // assertEquals(7, alumno.notaMayor());
     }
 }
