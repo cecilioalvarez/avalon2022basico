@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -23,11 +24,26 @@ public class AlumnoTest {
         alumno.addNota(new Nota("matetaticas",7));
         alumno.addNota(new Nota("matetaticas",3));
         alumno.addNota(new Nota("matetaticas",5));
-
         //assert o confirmacion
-        assertEquals(5,alumno.notaMedia(),0.1);
+        assertEquals(5,alumno.notaMedia(),0.01);
 
     }
+
+    @Test
+    @DisplayName("Nota mayor del alumno")
+    public void notaMayorTest() {
+        //arrange
+        Alumno alumno= new Alumno("pedro");
+        //act actuar ,ejecutar
+        alumno.addNota(new Nota("matematicas",7));
+        alumno.addNota(new Nota("matematicas",3));
+        alumno.addNota(new Nota("matematicas",5));
+        //assert o confirmacion
+        assertEquals(new Nota("matematicas",7),alumno.mayorNota());
+
+    }
+
+
 
     @Test
     @DisplayName("Añadir nota a Alumno test")
