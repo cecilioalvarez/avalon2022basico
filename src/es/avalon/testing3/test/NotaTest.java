@@ -12,9 +12,14 @@ public class NotaTest {
     @DisplayName("comprobar que la nota esta aprobada")
     public void notaAprobadaTest(){
         Nota nota= new Nota("matematicas",8);
+        Nota nota2= new Nota("matematicas",5);
+
 
         boolean aprobada= nota.esAporbado();
+        boolean aprobada2=nota2.esAporbado();
 
         assertTrue(aprobada);
+        assertTrue(aprobada2);
+
     }
 }

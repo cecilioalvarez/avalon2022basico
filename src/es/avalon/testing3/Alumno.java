@@ -29,4 +29,13 @@ public class Alumno {
     public void addNota (Nota nota){
         notas.add(nota);
     }
+    public int notasAprobadas(){
+        int total=0;
+        for (Nota n: notas){
+            if (n.esAporbado()){
+                total++;
+            }
+        }
+        return total;
+    }
 }
