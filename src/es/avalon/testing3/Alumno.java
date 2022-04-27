@@ -34,12 +34,19 @@ public class Alumno {
     public int notasAprobadas() {
         int total=0;
         for (Nota n : notas) {
-
             if (n.esAprobado()) {
-
                 total++;
             }
         }
         return total;
+    }
+
+
+    public double notaMedia() {
+        double total=0;
+        for (Nota n : notas) {
+          total=total+n.getValor();
+        }
+        return total/notas.size();
     }
 }

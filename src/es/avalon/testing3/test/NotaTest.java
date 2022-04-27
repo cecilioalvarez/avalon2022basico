@@ -13,14 +13,17 @@ public class NotaTest {
     public void notaAprobadaTest() {
         //arrange de preparar el codigo para el test
         Nota nota= new Nota("matematicas",7);
-
+        Nota nota2= new Nota("matematicas",5);
         // la parte de Act
 
         boolean aprobada= nota.esAprobado();
+        boolean aprobada2= nota2.esAprobado();
 
         // confirmacion
 
         assertTrue(aprobada);
+        assertTrue(aprobada2);
+
 
     }
 
