@@ -1,5 +1,7 @@
 package es.avalon.testing3;
 
+import es.avalon.testing3.Alumno;
+import es.avalon.testing3.Nota;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
