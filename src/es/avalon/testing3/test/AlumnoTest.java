@@ -34,6 +34,21 @@ public class AlumnoTest {
         alumno.addNota(new Nota("matematicas", 5));
 
         assertEquals(5,alumno.notaMedia(),0.1);
+
+    }
+
+
+    @Test
+    @DisplayName("nota mayor del alumno")
+    public  void notaMayorTest(){
+
+        Alumno alumno =new Alumno("pedro");
+
+        alumno.addNota(new Nota("matematicas", 7));
+        alumno.addNota(new Nota("matematicas", 3));
+        alumno.addNota(new Nota("matematicas", 5));
+
+        assertEquals(new Nota("matematicas", 7),alumno.mayorNota());
     }
 
     @Test

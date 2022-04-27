@@ -47,4 +47,11 @@ public class Alumno {
         }
         return total/notas.size();
     }
+    public Nota mayorNota(){
+    Nota inicial=notas.get(0);
+    for (Nota nota: notas){
+       // if (inicial.getValor())
+        }
+        return total/notas.size();
+    }
 }
