@@ -52,5 +52,29 @@ public class Alumno {
         }
         return sumaNotas/notas.size();
     }
+    public double notaMayor(){
+        double mayor=0;
+
+        for (Nota nota : notas) {
+            if (mayor < nota.getValor()) {
+                mayor = nota.getValor();
+
+
+            }
+        }
+        return mayor;
+    }
+    public Nota mayorNota() {//devuelve un objeto Nota. Mejor solucion
+
+        Nota inicial= notas.get(0);
+        for (Nota nota: notas) {
+
+            if (inicial.getValor()<nota.getValor()) {
+                inicial=nota;
+            }
+        }
+        return inicial;
+
+    }
 
 }
