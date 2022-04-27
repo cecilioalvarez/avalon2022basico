@@ -14,24 +14,25 @@ public class LectorFichero {
     private File fichero;
 
     public List<String> leerLineas() throws FileNotFoundException {
-        List<String>lineas=new ArrayList<>();
+        List<String> lineas = new ArrayList<>();
         //Metodo para leer linea a linea un fichero.
         //Intenta leer un fichero. Si puede lo lee linea a lineay añade cada linea a la lista lineas.
         //Sino puede atrapa la excepcion y la lanza
-        try (Scanner scanner = new Scanner(fichero)){
-
+        try (Scanner scanner = new Scanner(fichero)) {
             while (scanner.hasNextLine()) {
-                lineas.add(scanner.nextLine());
+                String linea = scanner.nextLine();
+                if (linea.contains("empresa")) {
+                    lineas.add(linea);
 
+                }
             }
         } catch (FileNotFoundException e) {
             throw e;
-        }
 
+
+        }
         return lineas;
 
 
-
     }
-
 }
