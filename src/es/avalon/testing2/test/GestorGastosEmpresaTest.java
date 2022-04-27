@@ -1,6 +1,7 @@
 package es.avalon.testing2.test;
 
 import es.avalon.testing2.Empresa;
+import es.avalon.testing2.Gasto;
 import es.avalon.testing2.GestorGastoEmpresa;
 import es.avalon.testing2.LectorFichero;
 import org.junit.jupiter.api.DisplayName;
@@ -36,7 +37,11 @@ class GestorGastoEmpresaTest {
 
         assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
         assertTrue(listaEmpresas.contains(new Empresa("empresab")));
-
+        Empresa empresaA=listaEmpresas.get(0);
+        assertTrue(empresaA.getGastos().contains(new Gasto(100)));
+        assertTrue(empresaA.getGastos().contains(new Gasto(200)));
+        assertTrue(empresaA.getGastos().contains(new Gasto(300)));
+        assertTrue(empresaA.getGastos().contains(new Gasto(400)));
 
     }
 }

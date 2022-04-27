@@ -8,6 +8,14 @@ public class Empresa {
     private String nombre;
     private List<Gasto> gastos =new ArrayList<>();
 
+    public List<Gasto> getGastos() {
+        return gastos;
+    }
+
+    public void setGastos(List<Gasto> gastos) {
+        this.gastos = gastos;
+    }
+
     public String getNombre() {
         return nombre;
     }
