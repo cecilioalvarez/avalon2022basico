@@ -90,4 +90,25 @@ class EstudianteTest {
         assertEquals(8,est.notasMayor());
     }
 
+    @Test
+    @DisplayName("eliminar nota")
+    public void eliminanota(){
+        /****preparar el test*****/
+        Estudiante est = new Estudiante("Andres");
+        List<Nota> notas = new ArrayList<>();
+        Nota nota1 = new Nota("matematicas",8.0);
+        Nota nota2 =new Nota("matematicas2",7.0);
+
+
+        /******ACT (actuar)*********/
+        notas.add(nota1);
+        notas.add(nota2);
+
+        est.setNotas(notas);
+        //est.Delete(1);
+
+        /*********confirmas validar*********/
+        assertEquals(2,est.getNotas().size());
+    }
+
 }

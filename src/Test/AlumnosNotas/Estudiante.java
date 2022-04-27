@@ -63,7 +63,13 @@ public class Estudiante {
         }
         return total/contador;
     }
-
+    public void Delete(int pos){
+        if(pos<=Notas.size() && pos>=0){
+            Notas.remove(pos);
+        }else{
+            System.out.println("pos invalida");
+        }
+    }
 
 
 }
