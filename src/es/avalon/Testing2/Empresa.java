@@ -26,6 +26,10 @@ public class Empresa {
         this.nombre = nombre;
     }
 
+    public List<Gasto> getGastos() {
+        return gastos;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
