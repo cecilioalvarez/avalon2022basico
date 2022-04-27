@@ -42,4 +42,12 @@ public class Alumno {
         return total;
     }
 
+    //Conseguimos la media de las notas
+    public double notaMedia (){
+        double total = 0.0;
+        for (Nota n : notas) {
+            total = total + n.getValor();
+        }
+        return total/notas.size();
+    }
 }

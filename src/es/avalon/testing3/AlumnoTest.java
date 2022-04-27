@@ -39,4 +39,21 @@ public class AlumnoTest {
         //assert
         assertEquals(1, alumno.getNotas().size());
     }
+    @Test
+    @DisplayName("Vamos a calcular la media de notas")
+
+    public void addNotaMediaText() {
+
+        //arrange
+        Alumno alumno = new Alumno("Pedro");
+
+        //act
+
+        alumno.addNota(new Nota("Matematicas", 7));
+        alumno.addNota(new Nota("Lengua", 5));
+        alumno.addNota(new Nota("Historia", 3));
+
+        //assert
+        assertEquals(5, alumno.notaMedia(), 0.1);
+    }
 }
