@@ -45,4 +45,49 @@ class EstudianteTest {
         assertEquals(2,est.notasAprobadas());
     }
 
+
+    @Test
+    @DisplayName("nota media")
+    public void notaMedia(){
+        /****preparar el test*****/
+        Estudiante est = new Estudiante("Andres");
+        List<Nota> notas = new ArrayList<>();
+        Nota nota1 = new Nota("matematicas",7.0);
+
+        Nota nota2 =new Nota("matematicas2",7.0);
+
+
+        /******ACT (actuar)*********/
+        notas.add(nota1);
+        notas.add(nota2);
+
+        est.setNotas(notas);
+        System.out.println(est.getNotas().size());
+
+        /*********confirmas validar*********/
+        assertEquals(7,est.notaMedia());
+    }
+
+    @Test
+    @DisplayName("nota mayor")
+    public void notaMayor(){
+        /****preparar el test*****/
+        Estudiante est = new Estudiante("Andres");
+        List<Nota> notas = new ArrayList<>();
+        Nota nota1 = new Nota("matematicas",8.0);
+
+        Nota nota2 =new Nota("matematicas2",7.0);
+
+
+        /******ACT (actuar)*********/
+        notas.add(nota1);
+        notas.add(nota2);
+
+        est.setNotas(notas);
+        System.out.println(est.notasMayor());
+
+        /*********confirmas validar*********/
+        assertEquals(8,est.notasMayor());
+    }
+
 }

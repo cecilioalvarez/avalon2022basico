@@ -40,5 +40,30 @@ public class Estudiante {
         return total;
     }
 
+    public double notasMayor(){
+        double total=0;
+        for(Nota n: Notas){
+            if (n.esAprobado()){
+                if(total<n.getValor()){
+                    total=n.getValor();
+                }
+            }
+        }
+        return total;
+    }
+
+    public double notaMedia(){
+        double total=0;
+        int contador=0;
+        for(Nota n: Notas){
+            if (n.esAprobado()){
+                total=total+n.getValor();
+                contador++;
+            }
+        }
+        return total/contador;
+    }
+
+
 
 }
