@@ -8,29 +8,37 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 import static org.testng.AssertJUnit.assertEquals;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class GestorGastoEmpresaTest {
 
+
     @Test
     @DisplayName("leer los datos de las empresas y sus gastos del fichero de texto")
     public void leerEmpresaGastosDeFichero() throws FileNotFoundException {
 
-        GestorGastoEmpresa gestor= new GestorGastoEmpresa(new LectorFichero(new File("gastos.txt")));
 
-        List<Empresa> listaEmpresas=gestor.getEmpresasConGastos();
+        //geera dependencias entre los diferentes Test
+        LectorFichero lector=mock(LectorFichero.class);
+        List<String> lineas= new ArrayList<>();
+        lineas.add("empresaa, 100,200,400,600");
+        lineas.add("empresab, 50,100,200,25");
 
-        assertEquals(listaEmpresas.size(),3);
-       /* assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
+        when(lector.leerLineas()).thenReturn(lineas);
+
+        GestorGastoEmpresa gestor = new GestorGastoEmpresa(lector);
+        List<Empresa> listaEmpresas = gestor.getEmpresasConGastos();
+
+        assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
         assertTrue(listaEmpresas.contains(new Empresa("empresab")));
-        assertTrue(listaEmpresas.contains(new Empresa("empresac")));*/
-
 
 
     }
-
 
 }

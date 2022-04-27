@@ -13,7 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LectorFicheroTest {
-
     @Test
     @DisplayName("leer lineas de fichero")
     public void leerLineasTest() throws FileNotFoundException {
