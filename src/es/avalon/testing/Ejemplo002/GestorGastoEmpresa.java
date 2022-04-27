@@ -25,6 +25,7 @@ public class GestorGastoEmpresa {
             for (int i = 1; i < textos.length; i++) {
                 //Cojo el gasto de cada linea y lo convierto de String a Double
                 Gasto g=new Gasto(Double.parseDouble(textos[i]));
+                //y lo añado a Empresa e
                 e.addGasto(g);
 
             }

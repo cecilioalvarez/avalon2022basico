@@ -7,11 +7,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class LectorFichero {
+
+    private File fichero;
+
     public LectorFichero(File fichero) {
         this.fichero = fichero;
     }
-
-    private File fichero;
 
     public List<String> leerLineas() throws FileNotFoundException {
         List<String> lineas = new ArrayList<>();
