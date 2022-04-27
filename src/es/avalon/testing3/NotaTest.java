@@ -12,9 +12,13 @@ public class NotaTest {
     public void notaAprobadaTest() {
 
         Nota nota = new Nota("matematicas", 8);
+        Nota nota2 = new Nota("Lenguaje", 5);
+
 
         boolean aprobada = nota.esAprobado();
+        boolean aprobada2 = nota2.esAprobado();
 
         assertTrue(aprobada);
+        assertTrue(aprobada2);
     }
 }
