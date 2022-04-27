@@ -22,7 +22,11 @@ public class AlumnoTest {
         //arrange
         Alumno alumno = new Alumno("Pedro");
         List<Nota> notas = new ArrayList<>();
-        //act
+        //act ( En esta parte queremos establecer los objetos
+        // que se utilizaran para el testeo.
+
+        //Utilizamos la libreria de Mocking para simular los datos
+
         Nota nota1 = mock(Nota.class);
         when(nota1.esAprobado()).thenReturn(true);
 
@@ -36,7 +40,7 @@ public class AlumnoTest {
         notas.add(nota2);
         notas.add(nota3);
         alumno.setNotas(notas);
-        //assert
+        //assert ( Aqui se debe comprobar que los metodos funcionan
         assertEquals(3, alumno.getNotas().size());
     }
     @Test
