@@ -10,10 +10,10 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -29,6 +29,9 @@ public class GestorGastoEmpresaTest {
         List<String> lineas= new ArrayList<>();
         lineas.add("empresaa, 100,200,400,600");
         lineas.add("empresab, 50,100,200,25");
+        // la clase Arrays esta llena de metodo estaticos
+        // que nos ayudan a generar listas de forma sencilla
+        List<Gasto> gastos= Arrays.asList(new Gasto(100),new Gasto(200),new Gasto(400),new Gasto(600));
 
         when(lector.leerLineas()).thenReturn(lineas);
 
@@ -37,11 +40,11 @@ public class GestorGastoEmpresaTest {
 
         assertTrue(listaEmpresas.contains(new Empresa("empresaa")));
         assertTrue(listaEmpresas.contains(new Empresa("empresab")));
+
         Empresa empresaA=listaEmpresas.get(0);
-        assertTrue(empresaA.getGastos().contains(new Gasto(100)));
-        assertTrue(empresaA.getGastos().contains(new Gasto(200)));
-        assertTrue(empresaA.getGastos().contains(new Gasto(400)));
-        assertTrue(empresaA.getGastos().contains(new Gasto(600)));
+
+        assertArrayEquals(empresaA.getGastos().toArray(),gastos.toArray());
+
 
 
 
