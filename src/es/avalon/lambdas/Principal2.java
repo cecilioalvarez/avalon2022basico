@@ -1,9 +1,6 @@
 package es.avalon.lambdas;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Principal2 {
     public static void main(String[] args) {
@@ -14,7 +11,15 @@ public class Principal2 {
 
         // es la clase conjunto que permite tener una coleccion de elementos sin que haya repetidos
         //Set es un interface ,TreeSet es una implementación del interface
-        Set<Persona> conjunto= new TreeSet<>(new ComparadorPersonaNombre());
+
+
+        Comparator<Persona> comparadorNombre= new Comparator<Persona>() {
+            @Override
+            public int compare(Persona o1, Persona o2) {
+                return o1.getNombre().compareTo(o2.getNombre());
+            }
+        };
+        Set<Persona> conjunto= new TreeSet<>(comparadorNombre);
         conjunto.add(p4);
 
         conjunto.add(p1);
