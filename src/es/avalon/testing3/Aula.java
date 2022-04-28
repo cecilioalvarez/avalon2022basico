@@ -29,6 +29,7 @@ public class Aula {
     }
 
     public void addAlumno(Alumno a1) {
+        alumnos.add(a1);
     }
 
     public double notaMedia() {
