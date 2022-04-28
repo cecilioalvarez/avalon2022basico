@@ -39,4 +39,23 @@ public class AulaTest {
         assertEquals(4.3, aula.notaMediaAlumnos(), 0.1);
 
     }
+
+
+    @Test
+    @DisplayName("añadir un alumno al aula")
+    public void addAlumnoAlAula() {
+        //////ARRANGE//////
+        Aula aula= new Aula(1);
+        Alumno a1= new Alumno("pedro");
+        Alumno a2 = new Alumno ("Antonio");
+
+        //////ACT//////
+        aula.addAlumno(a1);
+        aula.addAlumno(a2);
+
+        //////ASSERT//////
+        assertEquals (2,aula.getAlumnoList().size());
+    }
+
+
 }
