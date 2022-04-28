@@ -1,5 +1,7 @@
 package es.avalon.lambdas;
 
+import java.util.Objects;
+
 public class Persona implements  Comparable<Persona>{
     private  String nombre;
     private  int edad;
@@ -26,13 +28,27 @@ public class Persona implements  Comparable<Persona>{
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Persona)) return false;
+        Persona persona = (Persona) o;
+        return Objects.equals(nombre, persona.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
+    }
+
+    @Override
     public int compareTo(Persona otraPersona) {
-        if (this.getEdad()>otraPersona.getEdad()){
+        //nos devuelve uno si la persona es mayor 0 si es igual -1 si es menor
+        if (this.getEdad()>otraPersona.getEdad()) {
+
             return 1;
-        } else if (this.getEdad()<otraPersona.getEdad()){
+        }else if (this.getEdad()< otraPersona.getEdad()) {
             return -1;
         }else {
             return 0;
         }
-    }
-}
+}}
