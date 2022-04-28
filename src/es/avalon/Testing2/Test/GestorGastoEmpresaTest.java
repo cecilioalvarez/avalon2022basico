@@ -9,8 +9,10 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -27,19 +29,23 @@ public class GestorGastoEmpresaTest {
         lineas.add("empresaa, 100,200,400,600");
         lineas.add("empresab, 50,100,200,25");
 
+        List<Gasto> gastos1 = Arrays.asList(new Gasto(100),new Gasto(200), new Gasto(400), new Gasto(600));
+        List<Gasto> gastos2 = Arrays.asList(new Gasto(50),new Gasto(100), new Gasto(200), new Gasto(25));
+
         when(lector.leerlineas()).thenReturn(lineas);
 
 
         GestorGastoEmpresa gestor = new GestorGastoEmpresa(lector);
         List<Empresa> listaEmpresa= gestor.getEmpresaConGastos();
 
-        assertTrue(listaEmpresa.contains(new Empresa("empresaa")));
-        assertTrue(listaEmpresa.contains(new Empresa("empresab")));
-        Empresa empresaA=listaEmpresa.get(0);
-        assertTrue(empresaA.getGastos().contains(new Gasto(100)));
-        assertTrue(empresaA.getGastos().contains(new Gasto(200)));
-        assertTrue(empresaA.getGastos().contains(new Gasto(400)));
-        assertTrue(empresaA.getGastos().contains(new Gasto(600)));
+        Empresa empresaA = listaEmpresa.get(0);
+        Empresa empresaB = listaEmpresa.get(1);
+
+        assertTrue(listaEmpresa.contains(empresaA));
+        assertTrue(listaEmpresa.contains(empresaB));
+
+        assertArrayEquals(empresaA.getGastos().toArray(),gastos1.toArray());
+        assertArrayEquals(empresaB.getGastos().toArray(),gastos2.toArray());
     }
 
 }
