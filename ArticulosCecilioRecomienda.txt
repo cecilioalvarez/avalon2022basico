@@ -4,4 +4,5 @@
 Colecciones -> https://www.arquitecturajava.com/java-collections-framework-y-su-estructura/
 Java Integer Wrapper -> https://www.arquitecturajava.com/java-integer-wrapper-y-certificacion/
 Anotaciones -> https://www.arquitecturajava.com/el-concepto-de-java-annotations/
+Java 8 FlatMap y Streams -> https://www.arquitecturajava.com/java-8-flatmap/
 
