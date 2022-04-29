@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class Principal {
     public static void main(String[] args) {
-        Persona p1=new Persona("pedro",20);
+      /*  Persona p1=new Persona("pedro",20);
         Persona p2=new Persona("ana",30);
 
         System.out.println(p1.compareTo(p2));
@@ -28,5 +28,5 @@ public class Principal {
             System.out.println(p.getEdad());
         }
 
-    }
-}
+    }*/
+}}

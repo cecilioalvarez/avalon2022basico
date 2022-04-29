@@ -2,7 +2,8 @@ package es.avalon.lambdas;
 
 import java.util.Objects;
 
-public class Persona implements  Comparable<Persona>{
+public class Persona{
+
     private String nombre;
     private int edad;
 
@@ -39,3 +40,4 @@ public class Persona implements  Comparable<Persona>{
     public int hashCode() {
         return Objects.hash(nombre);
     }}
+
