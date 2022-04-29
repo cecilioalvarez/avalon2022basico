@@ -1,7 +1,6 @@
-package Lmbdas;
+package Lmbdas.Ejemplo1personaComparator;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Principal {

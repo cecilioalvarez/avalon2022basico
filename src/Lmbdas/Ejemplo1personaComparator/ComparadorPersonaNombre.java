@@ -1,4 +1,4 @@
-package Lmbdas;
+package Lmbdas.Ejemplo1personaComparator;
 
 import java.util.Comparator;
 

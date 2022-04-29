@@ -1,7 +1,6 @@
-package Lmbdas;
+package Lmbdas.Ejemplo1personaComparator;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 

@@ -1,6 +1,4 @@
-package Lmbdas;
-
-import org.jetbrains.annotations.NotNull;
+package Lmbdas.Ejemplo1personaComparator;
 
 import java.util.Objects;
 
