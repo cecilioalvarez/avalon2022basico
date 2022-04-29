@@ -12,6 +12,10 @@ public class Principal3 {
         //imprimirOrdenado(new ComparadorPersonaEdad());
         // paso como parametro una funcion
         imprimirOrdenado(( p1, p2)->p1.getNombre().compareTo(p2.getNombre()));
+
+        imprimirOrdenado(( p1, p2)-> {
+            return p1.getEdad()>p2.getEdad()? 1:-1;
+        });
     }
 
     public static void imprimirOrdenado(Comparator<Persona> comparador) {
