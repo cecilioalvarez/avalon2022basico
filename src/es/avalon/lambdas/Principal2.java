@@ -11,10 +11,7 @@ public class Principal2 {
         Persona p3 = new Persona("miguel", 50);
         Persona p4 = new Persona("maria", 60);
 
-        // es la clase conjunto que permite tener una coleccion de elementos sin que haya repetidos
-        //Set es un interface ,TreeSet es una implementación del interface
 
-        //apuntador o una variable a una funcion
         Comparator<Persona> comparadorNombre= (Persona o1, Persona o2)-> {
             return o1.getNombre().compareTo(o2.getNombre());
         };
