@@ -3,7 +3,7 @@ package es.avalon.lambdas;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class _01Principal_compareTo {
+public class _01Principal_CompareTo {
 
     public static void main(String[] args) {
 

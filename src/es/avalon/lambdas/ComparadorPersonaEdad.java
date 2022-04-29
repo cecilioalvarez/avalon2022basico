@@ -2,6 +2,8 @@ package es.avalon.lambdas;
 
 import java.util.Comparator;
 
+
+//Esta clase se podria entender unicamente como una funcion con 2 parametros -> Devuelve un numero
 public class ComparadorPersonaEdad implements Comparator<Persona> {
 
 

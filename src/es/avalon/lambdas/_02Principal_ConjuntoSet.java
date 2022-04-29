@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class _02Principal_conjuntoSet {
+public class _02Principal_ConjuntoSet {
 
     public static void main(String[] args) {
 
@@ -18,7 +18,7 @@ public class _02Principal_conjuntoSet {
 
         //Esta clase llamada "Conjunto" permite tener una coleccion de elementos sin que haya repetidos
         //Set es un interfaz, TreeSet es una implementacion del interfaz
-        Set<Persona> conjuntoTreeSet = new TreeSet<>();
+        Set<Persona> conjuntoTreeSet = new TreeSet<>(); //Atencion, esto funciona sin pasar un comparador al TreeSet y HashSet por que lo implementamos en la clase Persona
         Set<Persona> conjuntoHashSet = new HashSet<>();
 
 
