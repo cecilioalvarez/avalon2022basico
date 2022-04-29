@@ -1,11 +1,9 @@
 package es.avalon.Lambdas.Ejemplo2LambdasStreams;
 
-import es.avalon.Lambdas.Ejemplo1Introduccion.Producto;
-
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-public class Main5 {
+public class Main6 {
     public static void main(String[] args) {
         Producto p6 = new Producto(1, "ordenador", 100, "Informatica");
         Producto p1 = new Producto(2, "mesa", 200, "oficina");
@@ -28,9 +26,12 @@ public class Main5 {
         //s.forEach((p) -> System.out.println(p.getConcepto()));
 
 
-        s.filter((p) -> p.getImporte()<1000)
+        s.filter((p) -> p.getCategoria().equals("Informatica"))
                 .peek( (p) -> System.out.println(p.getConcepto().toUpperCase()))
-                .filter(p -> p.getCategoria().equals("Informatica"))
-                .forEach( (p) -> System.out.println(p.getConcepto()));
+                .filter(p -> p.getImporte()<150)
+                .map((p) -> p.getConcepto())
+                //Dentro de parentesis (texto) se le da el nombre que se quiera a la variable a utilizar
+                .forEach( (texto) -> System.out.println(texto));
     }
 }
+
