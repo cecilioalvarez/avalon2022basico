@@ -2,6 +2,8 @@ package es.avalon.lambdas.Ejemplo001;
 
 import java.util.Comparator;
 
+//clase con una sola funcion con dos parametros que devuelve un entero -> entero
+
 public class ComparadorPersonaEdad  implements Comparator<Persona> {
     @Override
     public int compare(Persona o1, Persona o2) {

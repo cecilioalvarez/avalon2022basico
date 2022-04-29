@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class ComparadorPersonaNombre implements Comparator<Persona> {
     @Override
-    public int compare(Persona o1, Persona o2) {
-        return o1.getNombre().compareTo(o2.getNombre());
+    public int compare(Persona p1, Persona p2) {
+        return p1.getNombre().compareTo(p2.getNombre());
     }
 }

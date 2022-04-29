@@ -19,7 +19,7 @@ public class Principal2 {
                 return o1.getNombre().compareTo(o2.getNombre());
             }
         };*/
-        Comparator<Persona>comparadorNombre= (Persona o1, Persona o2)->{//La linea 16 y 22 son equivalentes
+        Comparator<Persona>comparadorNombre= (Persona o1, Persona o2)->{ //La linea 16 y 22 son equivalentes
             return o1.getNombre().compareTo(o2.getNombre());
 
         };
