@@ -1,9 +1,12 @@
 package es.avalon.lambdas;
 
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
-public class Principal4 {
+public class Principal6 {
     public static void main(String[] args) {
+
+
         Producto p1 = new Producto(1,"ordenador",100,"informatica");
         Producto p2 = new Producto(2,"mesa",200,"oficina");
         Producto p3 = new Producto(3,"silla",100,"oficina");
@@ -21,26 +24,12 @@ public class Principal4 {
         lista.add(p5);
         lista.add(p6);
 
-        filtrarProducto(lista,(p)->p.getCategoria().equals("farmacia"));
-
-
-
-
+        Stream<Producto> s= lista.stream();
+        s.filter((p)->p.getCategoria().equals("informatica"))
+                .peek((p)->System.out.println("++"+p.getConcepto().toUpperCase()+"**"))
+                .filter(p->p.getImporte()<150)
+                .map((p)->p.getConcepto())
+                .forEach((s1)-> System.out.println(s1));
+    }
     }
 
-    public void  imprimir(FiltroProducto filtro){
-
-    }
-
-    public static void filtrarProducto(ArrayList<Producto> lista,FiltroProducto filtro) {
-
-        for (Producto p: lista){
-           /* if (p.getImporte()<tope){
-                System.out.println(p.getConcepto());
-            }*/
-            if (filtro.filtrar(p)){
-                System.out.println(p.getConcepto());
-            }
-        }
-    }
-}
