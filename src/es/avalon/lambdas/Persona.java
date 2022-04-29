@@ -2,7 +2,7 @@ package es.avalon.lambdas;
 
 import java.util.Objects;
 
-public class Persona  {
+public class Persona   {
 
     private String nombre;
     private int edad;

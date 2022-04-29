@@ -2,6 +2,7 @@ package es.avalon.lambdas;
 
 import java.util.Comparator;
 
+//unicamente una funcion   con dos parametros (Persona1,Persona2)->numero
 public class ComparadorPersonaEdad  implements Comparator<Persona> {
     @Override
     public int compare(Persona o1, Persona o2) {

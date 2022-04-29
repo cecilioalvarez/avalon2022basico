@@ -12,13 +12,11 @@ public class Principal2 {
         // es la clase conjunto que permite tener una coleccion de elementos sin que haya repetidos
         //Set es un interface ,TreeSet es una implementación del interface
 
-
-        Comparator<Persona> comparadorNombre= new Comparator<Persona>() {
-            @Override
-            public int compare(Persona o1, Persona o2) {
+        //apuntador o una variable a una funcion
+        Comparator<Persona> comparadorNombre= (Persona o1, Persona o2)-> {
                 return o1.getNombre().compareTo(o2.getNombre());
-            }
         };
+
         Set<Persona> conjunto= new TreeSet<>(comparadorNombre);
         conjunto.add(p4);
 
