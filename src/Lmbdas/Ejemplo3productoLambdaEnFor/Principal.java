@@ -23,6 +23,12 @@ public class Principal {
         lista.add(p5);
         lista.add(p6);
         Stream<Producto> S = lista.stream();
-        S.forEach((p)-> System.out.println(p.getConcepto()));
+        //S.forEach((p)-> System.out.println(p.getConcepto()));
+        S.filter(((p)->p.getCategoria().equals("informatica")))
+                .peek((p)-> System.out.println("**"+p.getConcepto().toUpperCase()+"**"))
+                .filter(p->p.getImporte()<150)//for each pero deja disponible la lista
+                .map((p)-> p.getConcepto())// convierte a texto
+                .forEach((s1)-> System.out.println(s1));//por no hay llamado de funcion
+
     }
 }
