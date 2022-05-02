@@ -1,6 +1,8 @@
 package es.avalon.testing2.test;
 
 import es.avalon.testing2.Empresa;
+
+
 import es.avalon.testing2.Gasto;
 import es.avalon.testing2.GestorGastoEmpresa;
 import es.avalon.testing2.LectorFichero;
@@ -24,7 +26,7 @@ class GestorGastoEmpresaTest {
     public void leerEmpresaGastosDeFichero() throws FileNotFoundException {
 
 
-        //geera dependencias entre los diferentes Test
+        //genera dependencias entre los diferentes Test
         /******** Arrange ****************/
         List<String> lineas = new ArrayList<>();
         lineas.add("empresaa, 100,200,400,600");

@@ -1,6 +1,7 @@
 package es.avalon.Lambdas.Ejemplo2LambdasStreams;
 
 import java.util.ArrayList;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 public class Main6 {
@@ -21,15 +22,29 @@ public class Main6 {
         lista.add(p5);
 
         //Convierte una lista en un flujo de trabajo.
-        Stream<Producto> s = lista.stream();
+        Stream<Producto> streamDeProductos = lista.stream();
 
         //s.forEach((p) -> System.out.println(p.getConcepto()));
 
+        Function<Producto, String> method = Producto::getConcepto;
+        Function<Producto, String> method2 = p -> p.getConcepto();
+        Function<Producto, String> method3 = (Producto p) -> {
+            return p.getConcepto();
+        };
 
-        s.filter((p) -> p.getCategoria().equals("Informatica"))
-                .peek( (p) -> System.out.println(p.getConcepto().toUpperCase()))
-                .filter(p -> p.getImporte()<150)
-                .map((p) -> p.getConcepto())
+
+
+        streamDeProductos
+                .filter((p) -> p.getCategoria().equals("Informatica"))
+                .peek( (Producto p) -> {
+                    System.out.println(p.getConcepto().toUpperCase());
+                    System.out.println(p.getConcepto().toUpperCase());
+                })
+                .filter((Producto p) -> {
+                    System.out.println(p.getConcepto().toUpperCase());
+                    return p.getImporte()<150;
+                })
+                .map(method)
                 //Dentro de parentesis (texto) se le da el nombre que se quiera a la variable a utilizar
                 .forEach( (texto) -> System.out.println(texto));
     }
