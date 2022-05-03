@@ -1,10 +1,13 @@
 package es.avalon.jdbc;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-public class Principal {
+public class PrincipalActualizar {
 
-    // jdbc:mysql://localhost:3306/biblioteca
+
     static final String URL = "jdbc:mysql://localhost:8889/cursos";
     static final String USUARIO="root";
     // opcoin clave =root
@@ -18,19 +21,16 @@ public class Principal {
             System.out.println("estamos conectados");
             // el objeto statement se encarga de crear una sentencia
             Statement sentencia= con.createStatement();
-            //el metodo executeQuery se encarga de e
-
-
-            ResultSet rs=sentencia.executeQuery("select * from Personas");
-            while (rs.next()) {
-
-                System.out.println(rs.getString("nombre"));
-            }
+            //el metodo executeQuery se encarga de ejecutar la sentencia
+            //este metodo devuelve un resultSET
+            sentencia.executeUpdate("update Personas set nombre='miguel' where dni='1'" );
 
         } catch (SQLException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
 
 
     }
+
+
 }

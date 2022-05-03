@@ -2,9 +2,8 @@ package es.avalon.jdbc;
 
 import java.sql.*;
 
-public class Principal {
+public class PrincipalInsertar {
 
-    // jdbc:mysql://localhost:3306/biblioteca
     static final String URL = "jdbc:mysql://localhost:8889/cursos";
     static final String USUARIO="root";
     // opcoin clave =root
@@ -18,19 +17,15 @@ public class Principal {
             System.out.println("estamos conectados");
             // el objeto statement se encarga de crear una sentencia
             Statement sentencia= con.createStatement();
-            //el metodo executeQuery se encarga de e
-
-
-            ResultSet rs=sentencia.executeQuery("select * from Personas");
-            while (rs.next()) {
-
-                System.out.println(rs.getString("nombre"));
-            }
+            //el metodo executeQuery se encarga de ejecutar la sentencia
+            //este metodo devuelve un resultSET
+            sentencia.executeUpdate("insert into Personas (dni,nombre,edad) values ('3','antonio',50)");
 
         } catch (SQLException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
 
 
     }
+
 }
