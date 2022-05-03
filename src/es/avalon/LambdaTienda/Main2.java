@@ -1,7 +1,6 @@
 package es.avalon.LambdaTienda;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.stream.Stream;
 
 public class Main2 {
