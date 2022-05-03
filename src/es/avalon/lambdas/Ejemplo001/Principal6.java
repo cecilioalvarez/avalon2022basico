@@ -26,23 +26,28 @@ public class Principal6 {
 
         Stream<Producto> s=lista.stream();//Stream es convertir una lista en un flujo de trabajo.
 
-        for (Producto p:lista
+        for (Producto p: lista
              ) {
             System.out.println(p.getConcepto());
 
 
         }
+        System.out.println("....................");
+        s.forEach((texto-> System.out.println(texto.getImporte())));
+        System.out.println("....................");
+        Stream<Producto>s1=lista.stream();
+        s1.forEach((texto-> System.out.println(texto.getConcepto())));
         System.out.println("...................");
         //la funcion es una high order function
         //s.forEach((p)-> System.out.println(p.getConcepto()));
 
-        s.filter((p)->p.getCategoria().equals("informatica"))
+        /*s.filter((p)->p.getCategoria().equals("informatica"))
                 .peek((p)-> System.out.println(p.getConcepto().toUpperCase()))//El peek es un foreach que no finaliza la lista
                 .filter(p->p.getImporte()<150)
                 .map((p)->p.getConcepto())
                 .forEach((texto)-> System.out.println(texto));//texto es un nombre de la variable .map que lo ha tansformado en string
                                                               //podriamos haberla llamado como quisieramos
-
+*/
 
 
 
