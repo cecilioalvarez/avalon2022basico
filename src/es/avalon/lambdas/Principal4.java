@@ -26,6 +26,8 @@ public class Principal4 {
 
     }
 
+
+    // esto es un high order function
     public static void filtrarProducto(ArrayList<Producto> lista, FiltroProducto filtro) {
 
         for (Producto p: lista) {
