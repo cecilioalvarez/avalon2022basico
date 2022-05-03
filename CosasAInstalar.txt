@@ -1,0 +1,23 @@
+Programas a instalar:
+Java SE Dev Kit -> https://www.oracle.com/java/technologies/downloads/#jdk18-windows
+Intellij IDEA -> https://www.jetbrains.com/es-es/idea/download/#section=windows
+
+
+Instalacion de librerias:
+Boton derecho en el proyecto – Open module Settings – Libraries – Add – new Module – From Maven -
+
+Para Testing:
+Uso de la libreria para realizar test:
+org.junit.jupiter:junit-jupiter-api:5.8.2
+
+Uso de la siguiente librería Mockito para crear objetos ficticios en las pruebas unitarias:
+org.mockito:mockito-core:4.5.1
+
+
+Para Conexion con BBDD:
+Uso de la libreria mysqlConector para la conexion con las BBDD de mysql
+mysql:mysql-connector-java:8.0.27
+
+
+
+
