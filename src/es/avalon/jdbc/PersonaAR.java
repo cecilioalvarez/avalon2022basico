@@ -1,9 +1,6 @@
 package es.avalon.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 //AR --> Active Record //Patron de diseño que simplifica la insercion de datos
 public class PersonaAR {
@@ -65,5 +62,68 @@ public class PersonaAR {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void borrar() {
+        try {
+            //Creamos un objeto de Conexion
+            Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
+            System.out.println("Estamos conectados");
+
+            //Una vez estamos conectados
+
+            //Creamos un objeto sentencia para realizar una consulta
+            Statement sentencia = con.createStatement();
+
+            //Creamos una sentencia para insertar nuevos datos
+            sentencia.executeUpdate("Delete from Personas where dni = "+ getDni() +"");
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public void actualizar() {
+        try {
+            //Creamos un objeto de Conexion
+            Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
+            System.out.println("Estamos conectados");
+
+            //Una vez estamos conectados
+
+            //Creamos un objeto sentencia para realizar una consulta
+            Statement sentencia = con.createStatement();
+
+            //Creamos una sentencia para actualizar una fila
+            sentencia.executeUpdate("update Personas set nombre='"+ getNombre() +"' where dni="+ getDni() +"");
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static PersonaAR buscarUno(String dni){
+        try {
+            //Creamos un objeto de Conexion
+            Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
+            System.out.println("Estamos conectados");
+
+            //Una vez estamos conectados
+
+            //Creamos un objeto sentencia para realizar una consulta
+            Statement sentencia = con.createStatement();
+
+            //Creamos una sentencia para actualizar una fila
+            ResultSet rs = sentencia.executeQuery("select * from Personas where dni='"+ dni +"'");
+            rs.next();
+            return new PersonaAR(rs.getString("dni"), rs.getString("nombre"), rs.getInt("edad"));
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
