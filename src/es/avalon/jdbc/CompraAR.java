@@ -76,9 +76,11 @@ public class CompraAR {
             Statement sentencia= con.createStatement();
             //el metodo executeQuery se encarga de ejecutar la sentencia
             //este metodo devuelve un resultSET
+            String sql="insert into Compras (fecha,concepto,importe,personas_dni) values ('"+getFecha()+
+                    "','"+getConcepto()+"',"+getImporte()+",'"+getDniPersona()+"')";
+            System.out.println(sql);
             sentencia
-                    .executeUpdate("insert into Compras (fecha,concepto,importe,personas_dni) values ('"+getFecha()+
-                            "','"+getConcepto()+"',"+getImporte()+",'"+getDniPersona()+"')");
+                    .executeUpdate(sql);
 
         } catch (SQLException e) {
             e.printStackTrace();
