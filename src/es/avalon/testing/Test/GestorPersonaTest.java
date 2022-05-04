@@ -1,6 +1,4 @@
 package es.avalon.testing.Test;
-
-
 import es.avalon.testing.GestorPersona;
 import es.avalon.testing.Persona;
 import org.junit.jupiter.api.BeforeEach;
@@ -32,6 +30,7 @@ public class GestorPersonaTest {
 
 
     }
+
 
     private List<Persona> generaLista() {
 
