@@ -1,6 +1,8 @@
 package es.avalon.jdbc;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 //AR --> Active Record //Patron de diseño que simplifica la insercion de datos
 public class PersonaAR {
@@ -45,19 +47,10 @@ public class PersonaAR {
 
     public void insertar() {
         try {
-            //Creamos un objeto de Conexion
             Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
-            System.out.println("Estamos conectados");
-
-            //Una vez estamos conectados
-
-            //Creamos un objeto sentencia para realizar una consulta
             Statement sentencia = con.createStatement();
 
-            //Creamos una sentencia para insertar nuevos datos
             sentencia.executeUpdate("insert into Personas (dni, nombre, edad) values ('"+ getDni()+"', '"+ getNombre() +"', "+ getEdad() +")");
-
-
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -66,19 +59,11 @@ public class PersonaAR {
 
     public void borrar() {
         try {
-            //Creamos un objeto de Conexion
             Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
-            System.out.println("Estamos conectados");
 
-            //Una vez estamos conectados
-
-            //Creamos un objeto sentencia para realizar una consulta
             Statement sentencia = con.createStatement();
 
-            //Creamos una sentencia para insertar nuevos datos
             sentencia.executeUpdate("Delete from Personas where dni = "+ getDni() +"");
-
-
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -86,18 +71,11 @@ public class PersonaAR {
     }
     public void actualizar() {
         try {
-            //Creamos un objeto de Conexion
             Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
-            System.out.println("Estamos conectados");
 
-            //Una vez estamos conectados
-
-            //Creamos un objeto sentencia para realizar una consulta
             Statement sentencia = con.createStatement();
 
-            //Creamos una sentencia para actualizar una fila
             sentencia.executeUpdate("update Personas set nombre='"+ getNombre() +"' where dni="+ getDni() +"");
-
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -106,20 +84,57 @@ public class PersonaAR {
 
     public static PersonaAR buscarUno(String dni){
         try {
-            //Creamos un objeto de Conexion
             Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
-            System.out.println("Estamos conectados");
 
-            //Una vez estamos conectados
-
-            //Creamos un objeto sentencia para realizar una consulta
             Statement sentencia = con.createStatement();
 
-            //Creamos una sentencia para actualizar una fila
             ResultSet rs = sentencia.executeQuery("select * from Personas where dni='"+ dni +"'");
             rs.next();
             return new PersonaAR(rs.getString("dni"), rs.getString("nombre"), rs.getInt("edad"));
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static List<PersonaAR> buscarTodos() {
+
+        List<PersonaAR> personas = new ArrayList<>();
+        try {
+            Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
+            Statement sentencia = con.createStatement();
+
+            ResultSet rs = sentencia.executeQuery("select * from Personas");
+
+            //Recorremos resultados y guardamos en lista
+            while (rs.next()) {
+                personas.add(new PersonaAR(rs.getString("dni"), rs.getString("nombre"), rs.getInt("edad")));
+            }
+
+            return personas;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static List<PersonaAR> buscarTodosPorNombre(String nombre) {
+
+        List<PersonaAR> personas = new ArrayList<>();
+        try {
+            Connection con = DriverManager.getConnection(DB_URL, USUARIO, PASSWORD);
+            Statement sentencia = con.createStatement();
+
+            ResultSet rs = sentencia.executeQuery("select * from Personas where nombre= '" + nombre +"'");
+
+            //Recorremos resultados y guardamos en lista
+            while (rs.next()) {
+                personas.add(new PersonaAR(rs.getString("dni"), rs.getString("nombre"), rs.getInt("edad")));
+            }
+
+            return personas;
 
         } catch (SQLException e) {
             e.printStackTrace();
