@@ -34,7 +34,8 @@ public class PrincipalInsertarScanner {
             Statement sentencia= con.createStatement();
             //el metodo executeQuery se encarga de ejecutar la sentencia
             //este metodo devuelve un resultSET
-            sentencia.executeUpdate("insert into Personas (dni,nombre,edad) values ('"+dni+"','"+nombre+"',"+edad+")");
+            sentencia.executeUpdate("insert into Personas (dni,nombre,edad) " +
+                    "values ('"+dni+"','"+nombre+"',"+edad+")");
 
         } catch (SQLException e) {
             e.printStackTrace();
