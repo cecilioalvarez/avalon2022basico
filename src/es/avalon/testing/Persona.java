@@ -1,5 +1,4 @@
 package es.avalon.testing;
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Objects;
@@ -40,24 +39,28 @@ public class Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public boolean esMayorDeEdad(){
+    public boolean esMayorDeEdad() {
 
-        Period periodo= Period.between(fechaNacimiento,LocalDate.now());
+        Period periodo = Period.between(fechaNacimiento, LocalDate.now());
 
-        return periodo.getYears()>=18;
+        return periodo.getYears() >= 18;
     }
 
-    public static Persona esMayor(Persona persona1,Persona persona2){
-        if (persona1.getFechaNacimiento().isBefore(persona2.getFechaNacimiento())){
+    public static Persona esMayor(Persona persona1, Persona persona2) {
+
+        if (persona1.getFechaNacimiento().isBefore(persona2.getFechaNacimiento())) {
             return persona1;
         } else {
             return persona2;
         }
     }
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Persona)) return false;
         Persona persona = (Persona) o;
         return Objects.equals(dni, persona.dni);
     }
