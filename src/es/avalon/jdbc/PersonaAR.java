@@ -1,6 +1,8 @@
 package es.avalon.jdbc;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersonaAR {
 
@@ -112,4 +114,27 @@ public class PersonaAR {
         }
         return null;
     }
+
+    public static List<PersonaAR> buscarTodos() {
+        List<PersonaAR> lista= new ArrayList<>();
+        try {
+            Connection con= DriverManager.getConnection(URL,USUARIO,CLAVE);
+            // el objeto statement se encarga de crear una sentencia
+            Statement sentencia= con.createStatement();
+            //el metodo executeQuery se encarga de ejecutar la sentencia
+            //este metodo devuelve un resultSET
+            ResultSet rs=sentencia.executeQuery("select * from Personas" );
+            while(rs.next()) {
+
+                lista.add(new PersonaAR(rs.getString("dni"),
+                        rs.getString("nombre"),rs.getInt("edad")));
+            }
+            return lista;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
