@@ -13,6 +13,9 @@ public class personaAddRecord {
     static final String CLAVE="";
    private  Connection con;
 
+    public personaAddRecord() {
+    }
+
     public personaAddRecord(String dni, String nombre, String apellido) {
         try {
             con = DriverManager.getConnection(DB_URL,USUARIO,CLAVE);
