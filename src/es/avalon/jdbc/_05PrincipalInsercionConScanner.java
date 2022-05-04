@@ -12,10 +12,6 @@ public class _05PrincipalInsercionConScanner {
 
     public static void main(String[] args) {
 
-
-
-
-
         try {
 
             //Creamos un objeto de Conexion
