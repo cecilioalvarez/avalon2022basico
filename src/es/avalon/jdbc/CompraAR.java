@@ -17,12 +17,22 @@ public class CompraAR {
     private LocalDate fecha;
     private String concepto;
     private double importe;
+    private String dniPersona;
 
-    public CompraAR(int numero, LocalDate fecha, String concepto, double importe) {
-        this.numero = numero;
+    public CompraAR( LocalDate fecha, String concepto, double importe,String dniPersona) {
+
         this.fecha = fecha;
         this.concepto = concepto;
         this.importe = importe;
+        this.dniPersona=dniPersona;
+    }
+
+    public String getDniPersona() {
+        return dniPersona;
+    }
+
+    public void setDniPersona(String dniPersona) {
+        this.dniPersona = dniPersona;
     }
 
     public int getNumero() {
@@ -67,8 +77,8 @@ public class CompraAR {
             //el metodo executeQuery se encarga de ejecutar la sentencia
             //este metodo devuelve un resultSET
             sentencia
-                    .executeUpdate("insert into Compras (numero,fecha,concepto,importe,personas_dni) values ('"+getNumero()+"','"+getFecha()+
-                            "','"+getConcepto()+"',"+getImporte()+",'juan')");
+                    .executeUpdate("insert into Compras (fecha,concepto,importe,personas_dni) values ('"+getFecha()+
+                            "','"+getConcepto()+"',"+getImporte()+",'"+getDniPersona()+"')");
 
         } catch (SQLException e) {
             e.printStackTrace();
