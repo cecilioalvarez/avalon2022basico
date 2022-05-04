@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.Crud;
 
 import java.sql.*;
 import java.util.Scanner;
