@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class RectanguloTest {
+
     // anotacion es un simbolo que añade un @ y un texto
     // esa anotación añade funcionalidad dinamica al metodo
     // d tal forma que el metodo pueda hacer cosas adicionales
@@ -44,11 +45,17 @@ public class RectanguloTest {
     @Test
     public void rectanguloCalculoPerimetroTest() {
 
-
+        //arrange (inicializar)
         Rectangulo r= new Rectangulo(2,2);
         Rectangulo r2= new Rectangulo(3,2);
-        assertEquals(8,r.perimetro());
-        assertEquals(10,r2.perimetro());
-    }
 
+        // actuar
+        double area= r.perimetro();
+        double area2= r2.perimetro();
+
+
+        // confirmar comprobar
+        assertEquals(8,area);
+        assertEquals(10,area2);
+    }
 }

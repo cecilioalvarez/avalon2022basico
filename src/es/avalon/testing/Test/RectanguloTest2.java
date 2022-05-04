@@ -1,13 +1,12 @@
 package es.avalon.testing.Test;
 
 import es.avalon.testing.Rectangulo;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+@DisplayName("Test sobre la clase rectangulo")
 public class RectanguloTest2 {
 
     Rectangulo rectangulo1;
@@ -20,6 +19,7 @@ public class RectanguloTest2 {
         rectangulo2= new Rectangulo(4,3);
     }
 
+    @DisplayName("Test calculo Area del Rectangulo")
     @Test
     public void rectanguloCalculoAreaTest() {
 
@@ -28,12 +28,14 @@ public class RectanguloTest2 {
         assertEquals(12,rectangulo2.area());
     }
     @Test
+    @DisplayName("Test calculo Perimetro del Rectangulo")
     public void rectanguloCalculoPerimetroTest() {
 
         assertEquals(8,rectangulo1.perimetro());
         assertEquals(14,rectangulo2.perimetro());
     }
 
+    @DisplayName("Test Area para valores de lado 0")
     @Test
     public void rectanguloCalculoAreaLadosCeroTest() {
 
@@ -45,6 +47,7 @@ public class RectanguloTest2 {
         assertEquals(0,rectangulo3.area());
     }
 
+    @DisplayName("Test Lanzamientor de Excepcion calculo Area lado negativo")
     @Test
     public void rectanguloCalculoAreaExcepcionTest() {
 
@@ -55,11 +58,11 @@ public class RectanguloTest2 {
         });
     }
 
+
     @AfterEach
     public  void tearDown() {
 
         rectangulo1=null;
         rectangulo2=null;
     }
-
 }
