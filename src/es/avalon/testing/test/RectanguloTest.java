@@ -34,15 +34,15 @@ public class RectanguloTest {
         assertEquals(0,rectangulo3.area());
     }
 
-    @Test
-    public void rectanguloCalculoAreaExcepcionTest() {
-        Rectangulo rectangulo1=new Rectangulo(-1,0);
-        Exception exception=assertThrows(Exception.class, ()->{
-
-        });
-
-
-    }
+//    @Test
+//    public void rectanguloCalculoAreaExcepcionTest() {
+//        Rectangulo rectangulo1=new Rectangulo(-1,0);
+//        Exception exception=assertThrows(Exception.class, ()->{
+//
+//        });
+//
+//
+//    }
 
     @Test
     public void rectanguloCalculoPerimetroTest() {
