@@ -37,8 +37,11 @@ public class RegaloAR {
         try{
             Connection con= DriverManager.getConnection(URL,USUARIO,CLAVE);
             System.out.println("Estamos conectados");
-            Statement sentencia=con.createStatement();
-            sentencia.executeUpdate("insert into regalos (numero,concepto) values ('"+getNumero()+"','"+getConcepto()+"')");
+            PreparedStatement sentencia=con.prepareStatement("insert into regalos (numero,concepto) values (?,? )");
+            sentencia.setInt(1,getNumero());
+            sentencia.setString(2,getConcepto());
+            //Statement sentencia=con.createStatement();
+            //sentencia.executeUpdate("insert into regalos (numero,concepto) values ('"+getNumero()+"','"+getConcepto()+"')");
         } catch (SQLException e) {
             e.printStackTrace();
         }

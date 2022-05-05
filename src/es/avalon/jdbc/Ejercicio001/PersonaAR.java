@@ -89,7 +89,8 @@ public class PersonaAR {
         try{
             Connection con= DriverManager.getConnection(URL,USUARIO,CLAVE);
             Statement sentencia= con.createStatement();
-            //necesitamos el rs.next() por que el resulse devuelve el anterios
+            //necesitamos el rs.next() por que el resultset devuelve el anterios
+            //Guardamos el resultado de la consulta en un conjunto de datos de tipo ResultSet
             ResultSet rs=sentencia.executeQuery("select * from personas where dni='"+dni+"'");
             rs.next();
             return new PersonaAR(rs.getString("dni"), rs.getString("nombre"), rs.getString("apellidos") );
