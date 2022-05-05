@@ -1,8 +1,5 @@
 package es.avalon.jdbc.Ejercicio002;
 
-import es.avalon.jdbc.PersonaAR;
-
-import java.time.LocalDate;
 import java.util.List;
 
 public class PrincipalAR {

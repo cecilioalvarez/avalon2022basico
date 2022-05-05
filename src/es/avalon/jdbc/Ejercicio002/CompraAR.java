@@ -1,7 +1,5 @@
 package es.avalon.jdbc.Ejercicio002;
 
-import es.avalon.jdbc.PersonaAR;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;

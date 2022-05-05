@@ -1,6 +1,4 @@
-package es.avalon.jdbc;
-
-import es.avalon.lambdas.Ejemplo001.Persona;
+package es.avalon.jdbc.Ejercicio001;
 
 import java.sql.*;
 import java.util.ArrayList;

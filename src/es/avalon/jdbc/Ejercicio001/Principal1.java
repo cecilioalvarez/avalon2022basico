@@ -1,8 +1,8 @@
-package es.avalon.jdbc;
+package es.avalon.jdbc.Ejercicio001;
 
 import java.sql.*;
 
-public class Principal {
+public class Principal1 {
 
     static final String URL = "jdbc:mysql://localhost:3306/cursosql";//3306 es el puerto por el que conecta xampp a mysql
     static final String USUARIO ="root";//xampp simpre usa de USUARIO---- root

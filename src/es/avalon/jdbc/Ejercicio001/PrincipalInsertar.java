@@ -1,4 +1,4 @@
-package es.avalon.jdbc;
+package es.avalon.jdbc.Ejercicio001;
 
 import java.sql.*;
 

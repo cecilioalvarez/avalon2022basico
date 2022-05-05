@@ -1,8 +1,5 @@
-package es.avalon.jdbc;
+package es.avalon.jdbc.Ejercicio001;
 
-import es.avalon.lambdas.Ejemplo001.Persona;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class PrincipalAR {
