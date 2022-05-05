@@ -10,10 +10,11 @@ import java.util.Properties;
 public class DataBaseHelper {
     public static Connection getConexion() throws SQLException, IOException {
 
-        Properties propiedades= new Properties();
+        Properties propiedades = new Properties();
         propiedades.load(new FileReader("database.properties"));
-        return DriverManager.getConnection(propiedades.getProperty("url"),propiedades.getProperty("usuario"),propiedades.getProperty("clave"));
+        return DriverManager.getConnection(propiedades.getProperty("url"), propiedades.getProperty("usuario"), propiedades.getProperty("clave"));
 
     }
 }
+
 
