@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-//AR --> Active Record //Patron de diseño que simplifica la insercion de datos
+//AR --> Active Record //Patron de diseño que simplifica la inserción de datos
 public class PersonaAR {
 
     static final String DB_URL = "jdbc:mysql://localhost:3306/cursos";
