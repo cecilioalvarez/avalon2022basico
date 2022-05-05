@@ -98,6 +98,24 @@ public class personaAddRecord {
         return lasPerosnas;
     }
 
+    public ArrayList<personaAddRecord> buscarTodosPorNombr(String Nombre){
+        ArrayList<personaAddRecord> lasPerosnas = new ArrayList<personaAddRecord>();
+        try {
+            Connection con = DriverManager.getConnection(DB_URL,USUARIO,CLAVE);
+            PreparedStatement sentenciaPre = con.prepareStatement("select * from personas WHERE nombre =?");
+            sentenciaPre.setString(1,Nombre);
+            ResultSet rs = sentenciaPre.executeQuery();
+            while (rs.next()){
+                lasPerosnas.add(new personaAddRecord(rs.getString("dni"),rs.getString("nombre"),rs.getString("apellido")));
+
+            }
+        } catch (SQLException e) {
+            System.out.println("conexion con fallo: "+e);
+            e.printStackTrace();
+        }
+        return lasPerosnas;
+    }
+
     public void modificar(){
         try {
 
