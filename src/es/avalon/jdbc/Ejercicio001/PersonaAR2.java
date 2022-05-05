@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import static es.avalon.jdbc.Ejercicio001.DataBaseHelper.getConexion;
+
 public class PersonaAR2 {
     private String dni;
     private String nombre;
@@ -48,94 +50,80 @@ public class PersonaAR2 {
     //static final String USUARIO = "root";//xampp simpre usa de USUARIO---- root
     //static final String CLAVE = "";// La clave es un campo vacio en windows o "root" en mac.
 
-    private static Connection getConexion() throws SQLException, IOException {
 
-        //Creamos un metodo estatico que le un archivo de properties donde hemos guadado La url, usuario y contraseña
-        //Tenemos esta funcion static que podemos reutilizar
 
-        Properties propiedades = new Properties();
-        propiedades.load(new FileReader("database.properties"));
-        return DriverManager.getConnection(propiedades.getProperty("URL"), propiedades.getProperty("USUARIO"), propiedades.getProperty("CLAVE"));
-
-    }
-
-    //Con este metodo no ganamos ninguna simplificacion.
+    //Con este metodo no ganamos ninguna simplificacion.No lo hemos usado.
     private static PreparedStatement getStatement(String sql, Connection con) throws SQLException {
         return con.prepareStatement(sql);
     }
 
     public void insertar() {
-        try {
-            Connection con = getConexion();
-            //Esto es lo que llamamos una consulta parametrizada
-            PreparedStatement sentencia = con.prepareStatement("insert into personas (DNI,Nombre,Apellidos) values (?,?,?)");
+        //Ponemos los parentesis y la llave por debajo de la conexion para que java cierre automaticamente los recursos.
+        //de la otra forma la conexion seguia abierta. Tendriamos que haber añadido una clausula Finally para cerralos
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                //Esto es lo que llamamos una consulta parametrizada
+                PreparedStatement sentencia = con.prepareStatement("insert into personas (DNI,Nombre,Apellidos) values (?,?,?)")) {
             sentencia.setString(1, getDni());
             sentencia.setString(2, getNombre());
             sentencia.setString(3, getApellido());
             sentencia.executeUpdate();
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
+        }//finally {
+        // getConexion().close();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
     }
 
     public void borrar() {
-        try {
-            Connection con = getConexion();
-            PreparedStatement sentencia = con.prepareStatement("DELETE FROM `personas` WHERE dni=?");
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement("DELETE FROM `personas` WHERE dni=?")) {
             sentencia.setString(1, getDni());
             sentencia.executeUpdate();
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            ;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
+
+
         }
     }
 
     public void actualizar() {
-        try {
-            Connection con = getConexion();
-            PreparedStatement sentencia = con.prepareStatement("update personas set nombre=?,apellidos=? where DNI=?");
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement("update personas set nombre=?,apellidos=? where DNI=?")) {
             sentencia.setString(1, getNombre());
             sentencia.setString(2, getApellido());
             sentencia.setString(3, getDni());
             sentencia.executeUpdate();
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            ;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
     public static PersonaAR2 buscarUno(String dni) {
-        try {
-            Connection con = getConexion();
-            PreparedStatement sentencia = con.prepareStatement("select * from personas where dni=?");
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement("select * from personas where dni=?")) {
             sentencia.setString(1, dni);
             ResultSet rs = sentencia.executeQuery();
             rs.next();
             return new PersonaAR2(rs.getString("dni"), rs.getString("nombre"), rs.getString("apellidos"));
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
         }
-        return null;
+
     }
 
     public static void todosLasPersonas() {
-        try {
-            Connection con = getConexion();
-            PreparedStatement sentencia = con.prepareStatement("select * from Personas");
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement("select * from Personas")) {
             ResultSet rs = sentencia.executeQuery();
             while (rs.next()) {
                 System.out.println(rs.getString("nombre") + " " + rs.getString("apellidos") + " " + rs.getString("dni"));
@@ -143,20 +131,17 @@ public class PersonaAR2 {
             }
 
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            ;
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
         }
 
     }
 
     public static List<PersonaAR2> buscarTodos() {
         List<PersonaAR2> todos = new ArrayList<>();
-        try {
-            Connection con = getConexion();
-            PreparedStatement sentencia = con.prepareStatement("select * from Personas");
+        try (
+                Connection con = DataBaseHelper.getConexion();
+                PreparedStatement sentencia = con.prepareStatement("select * from Personas")) {
             ResultSet rs = sentencia.executeQuery();
             while (rs.next()) {
                 todos.add(new PersonaAR2(rs.getString("dni"), rs.getString("nombre"), rs.getString("apellidos")));
@@ -165,13 +150,9 @@ public class PersonaAR2 {
             return todos;
 
 
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-            ;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+        } catch (SQLException | IOException e) {
+            throw new RuntimeException(e);
 
+        }
     }
 }
