@@ -18,7 +18,7 @@ public class PrincipalInsertar {
             Statement sentencia=con.createStatement();
             //el metodo executeUpdate se encarga de ejecutar la sentencia y actualiza la base de datos
             //con executeUpdate se puede modificar insertar y borrar.
-            sentencia.executeUpdate("delete from `personas` where DNI=100");//solo con indicar una de las colunmnas borra todas los campos
+            sentencia.executeUpdate("INSERT INTO `personas`(`DNI`, `Nombre`, `Apellidos`) VALUES ('123','Paco','Perez')");//solo con indicar una de las colunmnas borra todas los campos
 
             //ResultSet rs1 =sentencia.executeQuery("select * from facturas");
 
