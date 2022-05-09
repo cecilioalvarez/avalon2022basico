@@ -9,6 +9,8 @@ import java.sql.SQLException;
 
 public class PersonaRepository{
 
+
+
     public static void insertar(Persona persona) {
         //Ponemos los parentesis y la llave por debajo de la conexion para que java cierre automaticamente los recursos.
         //de la otra forma la conexion seguia abierta. Tendriamos que haber añadido una clausula Finally para cerralos

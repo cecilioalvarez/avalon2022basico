@@ -9,7 +9,8 @@ public class Principal {
     public static void main(String[] args) {
 
         Persona p=new Persona("554","Luis","Rodriguez");
-        insertar(p);
+        PersonaRepository pr=new PersonaRepository();
+        pr.borrar(p);
 
 
 
