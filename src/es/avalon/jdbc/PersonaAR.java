@@ -1,6 +1,10 @@
 package es.avalon.jdbc;
 
+import es.avalon.objetos.ejemplo10.Persona;
+
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PersonaAR {
@@ -102,4 +106,23 @@ public class PersonaAR {
             e.printStackTrace();
         }
     }
+
+     public static List<PersonaAR> buscarTodos() {
+
+        List<PersonaAR> lista = new ArrayList<>();
+         try {
+             Connection con = DriverManager.getConnection(URL,USUARIO,CLAVE);
+
+             Statement sentencia = con.createStatement();
+             ResultSet rs = sentencia.executeQuery("select * from personas");
+
+             while (rs.next()) {
+                 lista.add(new PersonaAR(rs.getString("dni"), rs.getString("Nombre"), rs.getInt("Edad")));
+             }
+             return lista;
+         } catch (SQLException e) {
+             e.printStackTrace();
+         }
+         return null;
+     }
 }
