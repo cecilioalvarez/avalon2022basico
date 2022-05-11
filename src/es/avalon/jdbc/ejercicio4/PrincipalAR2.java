@@ -6,3 +6,4 @@ public class PrincipalAR2 {
         persona.insertar();
     }
 }
+

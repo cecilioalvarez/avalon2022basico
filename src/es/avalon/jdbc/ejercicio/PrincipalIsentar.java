@@ -23,6 +23,5 @@ public class PrincipalIsentar {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 }

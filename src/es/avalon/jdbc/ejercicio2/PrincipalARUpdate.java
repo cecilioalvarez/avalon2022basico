@@ -7,5 +7,6 @@ public class PrincipalARUpdate {
         p.setEdad(30);
         p.update();
     }
+
 }
 

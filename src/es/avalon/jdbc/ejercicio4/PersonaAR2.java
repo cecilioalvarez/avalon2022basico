@@ -131,8 +131,6 @@ public class PersonaAR2 {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
-
     }
-
     }
 

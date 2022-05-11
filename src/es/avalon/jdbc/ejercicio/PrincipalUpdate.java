@@ -21,5 +21,7 @@ public class PrincipalUpdate {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 }
+

@@ -7,4 +7,5 @@ public class PrincipalInnsertar {
         Compras c= new Compras(LocalDate.now(),"televisor",250,"3C");
         c.insertar();
     }
+
 }

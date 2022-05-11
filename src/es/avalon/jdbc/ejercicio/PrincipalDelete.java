@@ -1,5 +1,4 @@
 package es.avalon.jdbc.ejercicio;
-
 import java.sql.*;
 
 public class PrincipalDelete {

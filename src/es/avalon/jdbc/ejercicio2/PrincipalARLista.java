@@ -9,5 +9,7 @@ public class PrincipalARLista {
             System.out.println(p.getNombre());
             System.out.println(p.getEdad());
         }
+
     }
 }
+

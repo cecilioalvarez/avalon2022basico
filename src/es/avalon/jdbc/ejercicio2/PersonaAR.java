@@ -119,6 +119,5 @@ public class PersonaAR {
         }
         return lista;
     }
-
     }
 
