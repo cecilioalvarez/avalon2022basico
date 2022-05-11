@@ -5,6 +5,5 @@ public class PrincipalARBuscar {
         PersonaAR persona=PersonaAR.buscarUno("2");
         System.out.println(persona.getNombre());
         System.out.println(persona.getEdad());
-
     }
 }

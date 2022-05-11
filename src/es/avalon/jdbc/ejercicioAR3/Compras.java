@@ -155,7 +155,6 @@ public class Compras {
             }
 
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

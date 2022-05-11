@@ -2,6 +2,7 @@ package es.avalon.jdbc.ejercicio;
 import java.sql.*;
 
 public class PrincipalDelete {
+
     static final String URL = "jdbc:mysql://localhost:3306/cursosql";
     static final String USUARIO = "root";
     static final String CLAVE = "";

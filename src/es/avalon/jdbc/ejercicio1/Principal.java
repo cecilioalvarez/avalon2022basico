@@ -31,7 +31,6 @@ public class Principal {
             sentencia.executeUpdate("insert into personas(Dni,nombre,edad)" +  "values ('" + Dni+ "','"+ nombre+"',"+edad+ ")");
 
 
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -12,5 +12,6 @@ public class PrincipalDelete {
     public static void main(String[] args) {
         Compras c=new Compras(13);
         c.delete();
+
     }
 }

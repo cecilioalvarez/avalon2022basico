@@ -39,6 +39,5 @@ public class PersonaRepository {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 }

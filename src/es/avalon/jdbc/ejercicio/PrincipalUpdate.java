@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class PrincipalUpdate {
+
     static final String URL = "jdbc:mysql://localhost:3306/cursosql";
     static final String USUARIO = "root";
     static final String CLAVE = "";

@@ -5,6 +5,5 @@ public class Principal {
 //        Persona p=new Persona("50","angel",20);
 //        PersonaRepository
     }
-
 }
 

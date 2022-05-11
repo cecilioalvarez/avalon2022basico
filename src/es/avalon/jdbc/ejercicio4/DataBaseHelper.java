@@ -13,5 +13,6 @@ public class DataBaseHelper {
         Properties propiedades= new Properties();
         propiedades.load(new FileReader("database.properties"));
         return DriverManager.getConnection(propiedades.getProperty("url"),propiedades.getProperty("usuario"),propiedades.getProperty("clave"));
+
     }
 }

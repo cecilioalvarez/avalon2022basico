@@ -7,7 +7,5 @@ public class PrincipalARDelete {
         PersonaAR p= new PersonaAR("50","Juan",50);
         p.delete();
 
-
-
     }
 }
